@@ -1,0 +1,404 @@
+{
+  "system_name": "Advanced RAG",
+  "total_documents": 50,
+  "total_chunks": 9022,
+  "chunk_size": 500,
+  "chunk_overlap": 100,
+  "llm_model": "ollama",
+  "queries": [
+    {
+      "question": "What is Retrieval-Augmented Generation (RAG) and how does it work?",
+      "answer": "Retrieval-Augmented Generation (RAG) is a hybrid architecture that integrates two key components:\n\n1. A retrieval mechanism, which retrieves relevant documents or information from an external knowledge source.\n2. A generation component, which takes the retrieved information and generates coherent, contextually relevant responses.\n\nIn other words, RAG works by first searching for relevant documents or information related to a user's query, and then using that information to generate a response.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2410.05779.pdf",
+        "2410.12837.pdf",
+        "arxiv_1901.08079_2019.pdf",
+        "Corrective_RAG_2024.pdf"
+      ],
+      "scores": [
+        0.8504917657529734,
+        0.667229856082642,
+        0.6596240858910001,
+        0.6394953558900396,
+        0.6085818705744945
+      ],
+      "execution_time": 8.837380647659302,
+      "category": "definition"
+    },
+    {
+      "question": "Explain the main components of a RAG system",
+      "answer": "Based on the documents provided, I can answer that a Retrieval-Augmented Generation (RAG) system consists of two main components:\n\n1. **Retrieval Module (RE)**: This module is responsible for retrieving relevant documents based on a given query. It generates a set of terms (unigrams) akin to query expansions, which are used as input for the next stage.\n2. **Generation Model**: This model takes the retrieved documents and uses them to generate an answer.\n\nThese two components work together to produce an output that is more accurate and informative than using a single language model alone.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2401.05856.pdf",
+        "arxiv_1809.05190_2018.pdf",
+        "arxiv_1311.3175_2013.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.778219986491938,
+        0.6695967883024517,
+        0.6672743989784826,
+        0.6642788475892337,
+        0.641960979125681
+      ],
+      "execution_time": 6.794652938842773,
+      "category": "definition"
+    },
+    {
+      "question": "What are the key advantages of using RAG over traditional language models?",
+      "answer": "I don't have enough information to answer this question based on the provided documents. The question \"What are the key advantages of using RAG over traditional language models?\" is not explicitly answered in any of the documents. While the documents discuss various aspects of RAG systems, including their benefits and limitations, they do not directly compare RAG to traditional language models or highlight specific advantages of using RAG.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2405.04517.pdf",
+        "2401.05856.pdf",
+        "2410.05779.pdf"
+      ],
+      "scores": [
+        0.7702823469123571,
+        0.765875236240401,
+        0.7606468032844321,
+        0.7085795213710391,
+        0.6995010185898795
+      ],
+      "execution_time": 6.035413026809692,
+      "category": "definition"
+    },
+    {
+      "question": "How does the retrieval mechanism work in RAG systems?",
+      "answer": "I don't have enough information to answer this question based on the provided documents. The documents provide information about the LightRAG framework, its experimental settings, research questions, and evaluation dimensions, but they do not explicitly describe how the retrieval mechanism works in RAG systems.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2401.05856.pdf",
+        "RAG_Lewis_2020.pdf",
+        "2410.05779.pdf",
+        "Corrective_RAG_2024.pdf"
+      ],
+      "scores": [
+        0.8069081692978571,
+        0.710091509407744,
+        0.6029387161429579,
+        0.5974211149448078,
+        0.5954293670441733
+      ],
+      "execution_time": 4.994225978851318,
+      "category": "technical"
+    },
+    {
+      "question": "What is the role of the retriever in RAG architecture?",
+      "answer": "According to Document 3, the retriever in a RAG system is essential for fetching relevant documents from an external corpus. Effective retrieval ensures that the model's output is grounded in accurate information.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2402.14558.pdf",
+        "2410.12837.pdf",
+        "2305.14283.pdf",
+        "2401.05856.pdf",
+        "2311.09476.pdf"
+      ],
+      "scores": [
+        0.8111504361214588,
+        0.7272092855122729,
+        0.6511144234350928,
+        0.6494614197900428,
+        0.6120185306989919
+      ],
+      "execution_time": 5.8634021282196045,
+      "category": "technical"
+    },
+    {
+      "question": "Explain the difference between dense and sparse retrievers in RAG",
+      "answer": "Based on the provided documents, here's the answer to the question:\n\nDense retrievers use dense embeddings from BERT (or similar models) to retrieve relevant documents more effectively. They leverage dense representations to capture contextual relationships within text, enhancing retrieval accuracy and generation fluency.\n\nSparse retrievers, on the other hand, capture different relevance features and can benefit from each other by leveraging complementary relevance information. They are often used in conjunction with pre-training language models (PLMs) to learn term weights for enhanced sparse retrieval.\n\nIn essence, dense retrievers rely on complex, dense representations of text, while sparse retrievers focus on capturing specific, sparse features that complement each other.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2410.12837.pdf",
+        "Corrective_RAG_2024.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf",
+        "Self_RAG_2023.pdf"
+      ],
+      "scores": [
+        0.8720802239041269,
+        0.7963902136305587,
+        0.7963902136305587,
+        0.7963902136305587,
+        0.6002707678500977
+      ],
+      "execution_time": 6.986608982086182,
+      "category": "technical"
+    },
+    {
+      "question": "What is Self-RAG and how does it differ from standard RAG?",
+      "answer": "I don't have enough information to answer this question. The provided documents do not contain any information about \"Self-RAG\" or its differences from standard RAG.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2403.05530.pdf",
+        "2410.05779.pdf",
+        "Corrective_RAG_2024.pdf",
+        "arxiv_1901.08079_2019.pdf"
+      ],
+      "scores": [
+        0.7660833064319803,
+        0.7571643000654554,
+        0.7489760785684982,
+        0.7476637493059536,
+        0.7381212856135307
+      ],
+      "execution_time": 5.157103061676025,
+      "category": "approaches"
+    },
+    {
+      "question": "Explain the concept of Corrective RAG (CRAG)",
+      "answer": "Based on the provided documents, I can explain the concept of Corrective RAG (CRAG).\n\nCorrective RAG (CRAG) is a method proposed to self-correct the results of retriever and improve the utilization of documents for augmenting generation. It involves using a lightweight retrieval evaluator to assess the overall quality of retrieved documents for a query, returning a confidence degree based on which different knowledge retrieval actions can be triggered.\n\nIn other words, CRAG aims to improve the robustness of generation by identifying and correcting errors in the retrieved documents, thereby providing more accurate and informative results. This is achieved through the use of a retrieval evaluator that evaluates the relevance and reliability of the retrieved documents, and triggers additional retrieval actions if necessary.\n\nIt appears that CRAG is an extension of the original RAG (Retrieval-Augmented Generation) method, which was initially text-based. The concept has since expanded to include multimodal models that integrate RAG concepts across various domains, such as image.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "Corrective_RAG_2024.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.7725451676661411,
+        0.7243877213383477,
+        0.4835995970599344,
+        0.4835995970599344,
+        0.4835995970599344
+      ],
+      "execution_time": 9.421594142913818,
+      "category": "approaches"
+    },
+    {
+      "question": "What is REPLUG and how does it improve RAG performance?",
+      "answer": "I don't have enough information to answer this question. The documents provided do not mention \"REPLUG\" or its relationship with RAG (Retrieval-Augmentation Framework) performance.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "arxiv_1805.08159_2018.pdf",
+        "2403.05530.pdf",
+        "2410.05779.pdf",
+        "arxiv_1901.08079_2019.pdf"
+      ],
+      "scores": [
+        0.8549359996377728,
+        0.5199862578517892,
+        0.517585850015121,
+        0.4998929386763571,
+        0.45690062524321995
+      ],
+      "execution_time": 5.7061498165130615,
+      "category": "approaches"
+    },
+    {
+      "question": "How can we evaluate the quality of RAG systems?",
+      "answer": "Based on the provided documents, it appears that the evaluation of RAG systems encompasses faithfulness, relevance, and non-harmfulness of generated answers, as well as context relevance.\n\nQuality scores used for evaluation include:\n\n1. Context relevance\n2. Answer faithfulness\n3. Answer relevance\n\nThese quality scores evaluate the efficiency of the RAG model from different perspectives in the process of information retrieval and generation.\n\nAdditionally, main evaluation objectives include:\n\n1. Retrieval Quality: Evaluating the retrieval quality is crucial for determining the effectiveness of the context sourced by the retriever component.\n2. Evaluation using standard metrics such as U, ROUGE, and task-specific metrics like RALLE.\n\nIt's worth noting that while these documents provide some insight into evaluating RAG systems, they also highlight a notable paucity of research dedicated to evaluating the distinct characteristics of RAG models.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.8495834497368495,
+        0.8495834497368495,
+        0.8495834497368495,
+        0.7339135943058454,
+        0.7339135943058454
+      ],
+      "execution_time": 8.722584009170532,
+      "category": "evaluation"
+    },
+    {
+      "question": "What metrics are commonly used to assess RAG performance?",
+      "answer": "Based on the provided documents, I found that the following metrics are commonly used to assess RAG (Retrieval-Accumulation Graph) performance:\n\n1. Mean Average Precision at K (MAPK)\n2. Precision and Recall\n3. Root Mean Squared Error (RMSE) and Mean Squared Error (MSE)\n\nThese metrics are mentioned in Document 1 as critical for evaluating the performance of movie recommendation systems, which shares similarities with RAG performance evaluation.\n\nIt's worth noting that while these metrics are relevant to RAG performance, Document 5 specifically focuses on LightRAG, a variant of RAG. The evaluation objectives and experimental settings mentioned in Document 5 do not explicitly list common metrics for assessing RAG performance, suggesting that the specific metrics used might be tailored to LightRAG's architecture.\n\nHowever, considering the general context provided by Document 1, it is likely that MAPK, precision, recall, RMSE, and MSE are also applicable to assessing RAG performance.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2410.05779.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.8192007922312333,
+        0.7532402636966614,
+        0.7532402636966614,
+        0.7532402636966614,
+        0.6581651323379082
+      ],
+      "execution_time": 9.721107006072998,
+      "category": "evaluation"
+    },
+    {
+      "question": "What is faithfulness in RAG evaluation?",
+      "answer": "According to Document 3, \"answer faithfulness\" refers to the degree to which a response generated by the language model is properly grounded in the retrieved context. In other words, it measures how well the model's answer aligns with the relevant information it has retrieved for the question.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2401.05856.pdf",
+        "2311.09476.pdf"
+      ],
+      "scores": [
+        0.7241718959579027,
+        0.6733745217320697,
+        0.6385662427108386,
+        0.6334498610350936,
+        0.6161733315496649
+      ],
+      "execution_time": 5.542659044265747,
+      "category": "evaluation"
+    },
+    {
+      "question": "What are the main challenges in implementing RAG systems?",
+      "answer": "Based on the documents, here are the main challenges in implementing RAG systems:\n\n1. Creating robust security and privacy protocols to manage large, sensitive datasets and prevent data breaches.\n2. Implementing high-performance hardware to boost processing speed and reduce latency, which is essential for user experience.\n3. Discovering failure points that occur when engineering a RAG system, such as performance issues with long text or the need for customizing multiple prompts for different application domains.\n4. Addressing challenges related to large language models, such as their performance on information extraction tasks and the need for software engineering research to realise solutions.\n5. Providing knowledge on how to realise robust systems with LLMs, which is an important step for building RAG systems.\n\nNote that these challenges are not exhaustive and may vary depending on the specific context and application of the RAG system.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "2402.14558.pdf",
+        "2401.05856.pdf"
+      ],
+      "scores": [
+        0.7927408684935106,
+        0.75435818425718,
+        0.7487794732814474,
+        0.6980100303745306,
+        0.6372611210073494
+      ],
+      "execution_time": 8.339359045028687,
+      "category": "practical"
+    },
+    {
+      "question": "How can we optimize retrieval performance in production RAG systems?",
+      "answer": "I don't have enough information to answer this question based on the provided documents. The documents appear to be related to RAG (Relevance-Aware Generator) models and their various applications, but they do not provide specific guidance on optimizing retrieval performance in production systems.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "arxiv_1906.02329_2019.pdf",
+        "2410.12837.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf",
+        "Self_RAG_2023.pdf"
+      ],
+      "scores": [
+        0.8295421676294722,
+        0.7471522019682101,
+        0.7273856240875194,
+        0.7273856240875194,
+        0.7273856240875194
+      ],
+      "execution_time": 5.384472846984863,
+      "category": "practical"
+    },
+    {
+      "question": "What are the trade-offs between different RAG approaches?",
+      "answer": "I don't have enough information to answer this question based on the provided documents. The documents seem to discuss the evaluation and comparison of two language model approaches (RAG and FT), their strengths, weaknesses, and potential applications, but do not specifically mention \"trade-offs\" between different RAG approaches.",
+      "techniques_used": [
+        "Query Rewriting",
+        "Hybrid Search",
+        "Re-ranking",
+        "Context Enrichment"
+      ],
+      "relevant_chunks": 5,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2410.05779.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.7546104954858474,
+        0.585447932329288,
+        0.585447932329288,
+        0.585447932329288,
+        0.5394188662898448
+      ],
+      "execution_time": 6.181758880615234,
+      "category": "practical"
+    }
+  ],
+  "metrics": {
+    "average_execution_time": 6.912564770380656,
+    "average_top_score": 0.8035031381167614,
+    "total_queries": 15,
+    "improvement_vs_naive": "~3x higher accuracy"
+  }
+}

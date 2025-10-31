@@ -1,0 +1,19 @@
+# Базові залежності для всіх RAG demo
+numpy>=1.24.0
+scikit-learn>=1.3.0
+requests>=2.31.0
+pymupdf>=1.23.0  # для парсингу PDF (fitz)
+
+# Опціонально: для FAISS RAG
+# faiss-cpu>=1.7.4  # для CPU
+# faiss-gpu>=1.7.4  # для GPU
+
+# Опціонально: для кращих embeddings
+# sentence-transformers>=2.2.0
+
+# Опціонально: для OpenAI API
+# openai>=1.0.0
+
+# Опціонально: для RAGAS evaluation
+# ragas>=0.1.0
+# datasets>=2.14.0

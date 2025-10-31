@@ -1,0 +1,1215 @@
+{
+  "system_name": "Naive RAG",
+  "total_documents": 50,
+  "total_chunks": 9022,
+  "chunk_size": 500,
+  "chunk_overlap": 100,
+  "llm_model": "ollama (llama3.2:3b)",
+  "queries": [
+    {
+      "question": "What is Retrieval-Augmented Generation (RAG)?",
+      "answer": "Retrieval-Augmented Generation (RAG) is an emerging hybrid architecture that addresses the limitations of pure generative models by integrating a retrieval mechanism with a Language Model (LLM). It combines a retriever with an LLM to retrieve and generate text.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.05779.pdf",
+        "2403.14403.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.23514922716277498,
+        0.23147747462014562,
+        0.2130870288377792
+      ],
+      "contexts": [
+        "ments were conducted to evaluate the effectiveness of\nLightRAG in comparison to existing RAG models. These assessments focused on several key\ndimensions, including retrieval accuracy, model ablation, response efficiency, and adaptability to\nnew information. The results demonstrated significant improvements over baseline methods.\n2\nRETRIEVAL-AUGMENTED GENERATION\nRetrieval-Augmented Generation (RAG) integrates user queries with a collection of pertinent doc-",
+        "sses to Retriever and LLM,\nwhich entail substantial computational costs.\n3.2\nAdaptive-RAG: Adaptive\nRetrieval-Augmented Generation\nWe now introduce our adaptive retrieval-augmented\nLLMs, which are built upon three different strate-\ngies described in the previous section, and which\nare designed to select the most suitable strategy\naccording to the complexity of queries.\nAdapting Retrieval-Augmented LLMs\nNote\nthat in real-world scenarios, not all q from users",
+        "across various applications. However, there is a gap in a sufficient survey of this space tracking\nthe evolution and recent changes in this space. The current survey intends to fill this gap.\n1.2 Overview of Retrieval-Augmented Generation (RAG)\nRetrieval-Augmented Generation (RAG) is an emerging hybrid architecture designed to address the\nlimitations of pure generative models. RAG integrates two key components: (i) a retrieval mechanism,"
+      ],
+      "execution_time": 4.059454917907715,
+      "category": "definition",
+      "query_id": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the main components of a RAG system?",
+      "answer": "Based on the context, it can be inferred that the main components of a RAG (Relevance Assessment and Generation) system include:\n\n1. Document chunking\n2. Language model (LLM)\n3. Retrieval process\n\nThese are mentioned in sections 5 and 6.1 of the research, specifically as potential failure points or areas of consideration when engineering a RAG system.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2401.05856.pdf",
+        "2401.05856.pdf",
+        "2401.05856.pdf"
+      ],
+      "scores": [
+        0.2310815256638108,
+        0.20790799353384745,
+        0.20150498663104516
+      ],
+      "contexts": [
+        "to the challenges with creating robust\nRAG systems. As advances in LLMs continue to take place, the\nsoftware engineering community has a responsibility to provide\nknowledge on how to realise robust systems with LLMs. This work\nis an important step for robustness in building RAG systems.\nResearch questions for this work include:\n• What are the failure points that occur when engineering a RAG\nsystem? (section 5) We present an empirical experiment using",
+        "ND FUTURE RESEARCH\nDIRECTIONS\nThe lessons learned from the three case studies are shown in Table 2.\nWe present our findings for the research question: What are the\nkey considerations when engineering a RAG system? Based on our\ntakeaways we identified multiple potential research areas linked to\nRAG as follows:\n6.1\nChunking and Embeddings\nChunking documents sounds trivial. However, the quality of chunk-\ning affects the retrieval process in many ways and in particular",
+        "a human rater for this domain.\nHowever, one threat to validity with this finding is that BioASQ is\na domain specific dataset and the reviewers were not experts i.e.\nthe large language model may know more than a non-expert.\n5\nFAILURE POINTS OF RAG SYSTEMS\nFrom the case studies we identified a set of failure points presented\nbelow. The following section addresses the research question What\nare the failure points that occur when engineering a RAG system?"
+      ],
+      "execution_time": 3.5631587505340576,
+      "category": "definition",
+      "query_id": 2,
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does RAG differ from traditional LLMs?",
+      "answer": "Based on the provided context, it can be inferred that RAG (Relevance-Aware Graph-based) differs from traditional LLMs (Large Language Models) in its focus and capabilities. The key differences mentioned are:\n\n1. **Evaluation Approach**: Answer 2 provides a more detailed explanation of how each metric functions and evaluates RAG models, indicating a deeper understanding of the model's performance.\n2. **Downstream Task Focus**: While both RAG and traditional LLMs focus on Question Answering (QA), RAG has a broader range of downstream tasks, including single-hop/multi-hop QA, multiple-choice, domain-specific QA, and long-form scenarios.\n\nIt can be concluded that RAG is distinct from traditional LLMs in its ability to handle diverse application scenarios, particularly those requiring more nuanced and complex question-answering tasks.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.05779.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.119188954768939,
+        0.113121894311309,
+        0.113121894311309
+      ],
+      "contexts": [
+        "nation\": \"Answer 2 not only covers a wide variety of metrics but also includes nuanced explanations\nof how some metrics interrelate and differ from one another, like the inclusion of both RMSE and MSE, as\nwell as the details behind AUC. In contrast, Answer 1 sticks primarily to standard metrics without much\nexploration of potential nuances.\"\nEmpowerment: \"Winner\": \"Answer 2 (LightRAG)\",\n\"Explanation\": \"Answer 2 empowers the reader more effectively by detailing how each metric functions and",
+        "efront of research in the LLMs community.\nThe primary objective of this evaluation is to comprehend\nand optimize the performance of RAG models across diverse\napplication scenarios.This chapter will mainly introduce the\nmain downstream tasks of RAG, datasets, and how to evaluate\nRAG systems.\nA. Downstream Task\nThe core task of RAG remains Question Answering (QA),\nincluding\ntraditional\nsingle-hop/multi-hop\nQA,\nmultiple-\nchoice, domain-specific QA as well as long-form scenarios\nsuitable for RAG.",
+        "efront of research in the LLMs community.\nThe primary objective of this evaluation is to comprehend\nand optimize the performance of RAG models across diverse\napplication scenarios.This chapter will mainly introduce the\nmain downstream tasks of RAG, datasets, and how to evaluate\nRAG systems.\nA. Downstream Task\nThe core task of RAG remains Question Answering (QA),\nincluding\ntraditional\nsingle-hop/multi-hop\nQA,\nmultiple-\nchoice, domain-specific QA as well as long-form scenarios\nsuitable for RAG."
+      ],
+      "execution_time": 6.525715112686157,
+      "category": "definition",
+      "query_id": 3,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of the retrieval component in RAG?",
+      "answer": "The purpose of the Retrieval Component in Retrieval-Augmented Generation (RAG) is to fetch relevant documents or information from an external knowledge database based on the input query.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1911.00964_2019.pdf",
+        "Corrective_RAG_2024.pdf",
+        "2410.05779.pdf"
+      ],
+      "scores": [
+        0.24799133687839434,
+        0.18876869998200507,
+        0.1866887159391569
+      ],
+      "contexts": [
+        "f h matrices where each of them is representing the feature\nmap matrix Gn from each n-Gram block.\nC. Duplex Attention Component\nDuplex attention component is one of the most important\ncomponents of our proposed network. Since attention [35]\nevolves into an effective component within the neural network\nfor extracting useful information, which achieves a remarkable\nresult for many machine learning tasks, we compose this\ncomponent with two sub attention components that are called",
+        "to\nsupply documents containing relevant knowledge\nfor generative LLMs. Earlier studies adopt either\nsparse or dense retrievers at the front end of a pre-\ntrained language model that specializes in response\ngeneration. Despite this, the methods above usually\nignore a question, what if the retrieval goes wrong?\nSince the purpose of introducing a retrieval is to\nsecure that generative LMs can obtain relevant and\naccurate knowledge. If retrieved documents are",
+        "ON\nRetrieval-Augmented Generation (RAG) integrates user queries with a collection of pertinent doc-\numents sourced from an external knowledge database, incorporating two essential elements: the\nRetrieval Component and the Generation Component. 1) The retrieval component is responsible\nfor fetching relevant documents or information from the external knowledge database. It identifies and\nretrieves the most pertinent data based on the input query. 2) After the retrieval process, the generation"
+      ],
+      "execution_time": 3.2420120239257812,
+      "category": "definition",
+      "query_id": 4,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Explain the concept of grounding in RAG systems",
+      "answer": "In the context of RAG (Retrieval-Augmented Generation) systems, \"grounding\" refers to the process of incorporating external, up-to-date knowledge sources into the generative process to improve the factual accuracy and relevance of the output. This is achieved by retrieving relevant information from external sources and using it to inform the generation of responses.\n\nIn other words, grounding involves taking a query (or input) and using it to retrieve context vectors or knowledge that is directly related to the topic or domain of the query. The retrieved context vectors are then used as input to a generative model (such as BART), which uses this external knowledge to generate more accurate and relevant responses.\n\nGrounding in RAG systems has been shown to improve the factual accuracy of generated text by providing a more robust and informative foundation for generation, rather than relying solely on internal language models.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "2410.12837.pdf",
+        "2410.05779.pdf"
+      ],
+      "scores": [
+        0.24702085989679928,
+        0.18293995883657402,
+        0.13803580345424202
+      ],
+      "contexts": [
+        "ious\nconsequences, such as spreading misinformation or providing incorrect advice (Ji et al. 2022).\nRAG models directly address these concerns by grounding their generative process in external,\nup-to-date knowledge sources. This grounding improves the factual accuracy of the output and enhances\nthe relevance of responses by incorporating real-world data that is directly tied to the query. Additionally,",
+        "retriever in a RAG system, BART has been shown to improve the factual accuracy of generated text by\ngrounding it in external knowledge. Studies have demonstrated that BART-based RAG models achieve\nstate-of-the-art results in various knowledge-intensive tasks, including dialogue generation and news\nsummarization.\n3. Retrieval-Augmented Generation Models Across Different Modalities\n3.1 Text-Based RAG Models: Text-based RAG models represent the most mature and widely\nresearched category.",
+        "rior efficiency and cost-effectiveness.\n5\nRELATED WORK\n5.1\nRETRIEVAL-AUGMENTED GENERATION WITH LLMS\nRetrieval-Augmented Generation (RAG) systems enhance LLM inputs by retrieving relevant infor-\nmation from external sources, grounding responses in factual, domain-specific knowledge Ram et al.\n(2023); Fan et al. (2024). Current RAG approaches Gao et al. (2022; 2023); Chan et al. (2024); Yu\net al. (2024) typically embed queries in a vector space to find the nearest context vectors. However,"
+      ],
+      "execution_time": 6.819050073623657,
+      "category": "definition",
+      "query_id": 5,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does the retrieval mechanism work in RAG systems?",
+      "answer": "Unfortunately, the provided context does not explicitly describe how the retrieval mechanism works in RAG systems. However, based on general knowledge about RAG (Relevance-Adjusted Graph) systems and their components, I can provide some information.\n\nIn RAG systems, the retrieval mechanism is typically responsible for finding relevant documents or entities that match a query. This is often achieved using techniques such as:\n\n1. Document similarity measures: Such as TF-IDF (Term Frequency-Inverse Document Frequency), cosine similarity, or other distance metrics to calculate the relevance of documents.\n2. Retrieval algorithms: Like Ranking algorithms like BM25 (Okapi-BM25) or Latent Semantic Analysis (LSA).\n3. Indexing techniques: Using inverted indexes, such as those based on Inverted File Indexes or Truncated Inverted File Indexes.\n\nHowever, since the provided context does not specifically mention these details, and it focuses more on the self-correction mechanism and its performance in augmenting RAG systems, I couldn't provide a more detailed explanation of how the retrieval mechanism works.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2401.05856.pdf",
+        "2410.05779.pdf",
+        "Corrective_RAG_2024.pdf"
+      ],
+      "scores": [
+        0.1887459804171323,
+        0.17008869528903148,
+        0.16792821826320029
+      ],
+      "contexts": [
+        "to the challenges with creating robust\nRAG systems. As advances in LLMs continue to take place, the\nsoftware engineering community has a responsibility to provide\nknowledge on how to realise robust systems with LLMs. This work\nis an important step for robustness in building RAG systems.\nResearch questions for this work include:\n• What are the failure points that occur when engineering a RAG\nsystem? (section 5) We present an empirical experiment using",
+        "LLM,\nspecifically GPT-4o-mini, to rank each baseline against our LightRAG. The evaluation prompt we\nused is detailed in Appendix 7.3.4. In total, we utilize four evaluation dimensions, including:\ni) Comprehensiveness: How thoroughly does the answer address all aspects and details of the\nquestion? ii) Diversity: How varied and rich is the answer in offering different perspectives and\ninsights related to the question? iii) Empowerment: How effectively does the answer enable the",
+        "mains\nlimited. Furthermore, augmenting RAG or Self-\nRAG with the proposed self-correction mechanism\nsignificantly outperformed the models consistently\nsupplemented with web search knowledge in all\ncases. This finding confirms that the observed\nadvancements are primarily attributable to the\nproposed self-correction mechanism.\n5.8\nComputational Overhead Analysis\nTo illustrate that our self-correction mechanism\nserves as a lightweight, plug-and-play solution"
+      ],
+      "execution_time": 7.4172139167785645,
+      "category": "technical",
+      "query_id": 6,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the role of embeddings in RAG?",
+      "answer": "The question does not specify the \"RAG\" mentioned in the context. However, based on the information provided, it appears that embeddings are a relevant area of research in Natural Language Processing (NLP), particularly in tasks such as paraphrase detection and answer sentence selection.\n\nSince there is no mention of \"RAG\", I will assume it refers to a topic or task related to NLP, possibly related to embeddings. In this case, the role of embeddings would likely be related to generating and utilizing embeddings for various NLP applications, including RAG (which might stand for \"Relevant Answer Generation\" or another similar concept).\n\nIf we make an educated guess, it's possible that in the context of RAG, embeddings play a crucial role in representing and matching chunks of text, such as answers or sentences, to determine their relevance or similarity. This could involve generating embeddings for these chunks using techniques like neural networks, which can learn complex patterns and relationships in language data.\n\nHowever, without more specific information about what \"RAG\" refers to, this is purely speculative, and the actual role of embeddings in RAG would depend on the specific context and requirements of the task.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2402.14558.pdf",
+        "2401.05856.pdf",
+        "arxiv_1805.08159_2018.pdf"
+      ],
+      "scores": [
+        0.16909806459078316,
+        0.16827053750902474,
+        0.16297053844064416
+      ],
+      "contexts": [
+        "lowing\nresearch questions to be addressed in this work.\nRQ1. How do LLMs assist industrial applica-\ntions, and in what ways? RQ2. What are the pri-\nmary applications that industries are focusing on,\nincluding the associated datasets and evaluation\nmetrics? RQ3. What are the deployment chal-\nlenges, if any? RQ4. What are the potential direc-\ntions to maximize the utility of LLMs in industrial\napplications?\nWith this study, our objective is to answer the\nabove-mentioned research questions.",
+        "esearch should explore the tradeoffs\nbetween these methods and their effects on critical downstream\nprocesses like embedding and similarity matching. A systematic\nevaluation framework comparing chunking techniques on metrics\nlike query relevance and retrieval accuracy would benefit the field.\nEmbeddings represent another active research area, including\ngenerating embeddings for multimedia and multimodal chunks\nsuch as tables, figures, formulas, etc. Chunk embeddings are typ-",
+        ", such as paraphrase detection (Socher et\nal. 2011) and answer sentence selection (Rao, He, and Lin\n∗Work done at the University of Maryland, College Park.\nCopyright c⃝2019, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\n1https://github.com/jinfengr/neural-tweet-search\n2016). In particular, exact match signals still play a criti-\ncal role in ranking, more than the role of term matching\nin, for example, paraphrase detection. Furthermore, in doc-"
+      ],
+      "execution_time": 8.042325973510742,
+      "category": "technical",
+      "query_id": 7,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Explain how dense retrieval works in RAG",
+      "answer": "Based on the provided context, it appears that there is no direct information about how dense retrieval specifically works in RAG (Retrieval-Augmented Generative) models. However, we can infer some information from related concepts.\n\nDense retrieval models, such as those using dense embeddings from BERT, leverage dense representations to retrieve relevant documents more effectively. In general, dense retrieval models use learned vector representations of words or phrases to build a dense embedding space, where similar documents are mapped to nearby points in this space.\n\nIn the context of RAG models, which utilize self-attention mechanisms to capture contextual relationships within text, dense retrieval can be used as a component to retrieve relevant documents for a given query. The dense retriever would map the input query to a dense representation, and then use this representation to find the most similar documents in the embedding space.\n\nWithout more specific information about how RAG models incorporate dense retrieval, it's difficult to provide a detailed explanation of the exact process. However, based on general knowledge of dense retrieval and its application in IR, we can infer that it works by:\n\n1. Building a dense representation of the input query using learned vector embeddings.\n2. Mapping this representation to a high-dimensional space where similar documents are represented by nearby points.\n3.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "Atlas_2022.pdf",
+        "arxiv_1510.01562_2015.pdf"
+      ],
+      "scores": [
+        0.21498474813922783,
+        0.1946968724218367,
+        0.1865636272474049
+      ],
+      "contexts": [
+        "re\nfoundational in text-based RAG models. These models utilize self-attention mechanisms to capture\ncontextual relationships within text, which enhances both retrieval accuracy and generation fluency.\nDense retrieval models, such as those using dense embeddings from BERT, offer superior performance\ncompared to traditional sparse methods like TF-IDF. Dense retrievers (Karpukhin et al. 2020), leverage\ndense representations to retrieve relevant documents more effectively.",
+        "ectiveness of supervised dense retrieval models.\nOn the other hand, zero-shot dense retrieval still\nremains difﬁcult. Many recent works consider the\nalternative transfer learning setup, where the dense\nretrievers are trained on a high-resource dataset and\nthen evaluated on queries from new tasks. The MS-\nMARCO collection (Bajaj et al., 2016), a massive\njudged dataset with a large number of judged query-\ndocument pairs, is arguably the most commonly\nused. As argued by Izacard et al.",
+        "brieﬂy overview the many related works (Section 2),\nbefore exposing the language models (Section 3). Finally, experiments are reported (Section 4).\n2\nRelated works\nThis section discuss related works by ﬁrst presenting those dealing with the term dependencies and mismatch\nproblems. We then introduce related works about Neural Network Language Models (NNLM).\n2.1\nHandling term dependencies\nEarly approaches for handling term dependencies in IR considered extensions of the bag of word representa-"
+      ],
+      "execution_time": 8.07043719291687,
+      "category": "technical",
+      "query_id": 8,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between sparse and dense retrieval?",
+      "answer": "Sparse and dense retrieval represent two different approaches to information retrieval in the context of embedding.\n\nSparse retrieval models capture only a limited number of highly relevant features, whereas dense retrieval models consider all possible features. This means that sparse retrieval focuses on the most important and relevant features, while dense retrieval incorporates a broader range of features, potentially capturing more nuanced and subtle relevance information.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.25594815605959104,
+        0.25594815605959104,
+        0.25594815605959104
+      ],
+      "contexts": [
+        "Retrieval : Sparse and dense embedding\napproaches capture different relevance features and can ben-\nefit from each other by leveraging complementary relevance\ninformation. For instance, sparse retrieval models can be used\n6https://github.com/aurelio-labs/semantic-router\n7https://huggingface.co/spaces/mteb/leaderboard\nto provide initial search results for training dense retrieval\nmodels. Additionally, pre-training language models (PLMs)\ncan be utilized to learn term weights to enhance sparse",
+        "Retrieval : Sparse and dense embedding\napproaches capture different relevance features and can ben-\nefit from each other by leveraging complementary relevance\ninformation. For instance, sparse retrieval models can be used\n6https://github.com/aurelio-labs/semantic-router\n7https://huggingface.co/spaces/mteb/leaderboard\nto provide initial search results for training dense retrieval\nmodels. Additionally, pre-training language models (PLMs)\ncan be utilized to learn term weights to enhance sparse",
+        "Retrieval : Sparse and dense embedding\napproaches capture different relevance features and can ben-\nefit from each other by leveraging complementary relevance\ninformation. For instance, sparse retrieval models can be used\n6https://github.com/aurelio-labs/semantic-router\n7https://huggingface.co/spaces/mteb/leaderboard\nto provide initial search results for training dense retrieval\nmodels. Additionally, pre-training language models (PLMs)\ncan be utilized to learn term weights to enhance sparse"
+      ],
+      "execution_time": 4.127697944641113,
+      "category": "technical",
+      "query_id": 9,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does chunking strategy affect RAG performance?",
+      "answer": "According to the context, it appears that a well-designed chunking strategy can significantly enhance the accuracy of information retrieval in RAG systems. By breaking down large external text corpora into smaller segments, chunking enables more targeted similarity searches and improves the overall quality of retrieved content.\n\nIn particular, it is suggested that chunking plays a vital role in facilitating the retrieval-augmented generation process and enhances the accuracy of information retrieval, particularly in rapidly evolving fields where up-to-date information is crucial.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.05779.pdf",
+        "2401.05856.pdf",
+        "2410.05779.pdf"
+      ],
+      "scores": [
+        0.19875783972403827,
+        0.19715663607376296,
+        0.16325661101995026
+      ],
+      "contexts": [
+        "posed\nLightRAG framework by addressing the following research questions: • (RQ1): How does LightRAG\ncompare to existing RAG baseline methods in terms of generation performance? • (RQ2): How do\ndual-level retrieval and graph-based indexing enhance the generation quality of LightRAG? • (RQ3):\nWhat specific advantages does LightRAG demonstrate through case examples in various scenarios? •\n(RQ4): What are the costs associated with LightRAG, as well as its adaptability to data changes?\n4.1",
+        "ND FUTURE RESEARCH\nDIRECTIONS\nThe lessons learned from the three case studies are shown in Table 2.\nWe present our findings for the research question: What are the\nkey considerations when engineering a RAG system? Based on our\ntakeaways we identified multiple potential research areas linked to\nRAG as follows:\n6.1\nChunking and Embeddings\nChunking documents sounds trivial. However, the quality of chunk-\ning affects the retrieval process in many ways and in particular",
+        "er access to\nup-to-date information Zhao et al. (2024), which is crucial in rapidly evolving fields. Chunking plays\na vital role in facilitating the retrieval-augmented generation process Lyu et al. (2024). By breaking\ndown a large external text corpus into smaller, more manageable segments, chunking significantly\nenhances the accuracy of information retrieval. This approach allows for more targeted similarity\nsearches, ensuring that the retrieved content is directly relevant to user queries."
+      ],
+      "execution_time": 4.630505084991455,
+      "category": "technical",
+      "query_id": 10,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the role of the retriever in RAG architecture?",
+      "answer": "The retriever in RAG systems plays an essential role for fetching relevant documents from an external corpus.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "RAG_Lewis_2020.pdf",
+        "2305.14283.pdf"
+      ],
+      "scores": [
+        0.18941386047827774,
+        0.18308932886171655,
+        0.17521497195072488
+      ],
+      "contexts": [
+        "constantly evolving, such as medical research, financial news, and legal proceedings. Furthermore,\nstudies have shown that RAG models achieve superior results in a variety of knowledge-intensive tasks,\nincluding document summarization and, knowledge-grounded dialogues\n2.2 Retriever Mechanisms in RAG Systems\nThe retriever in RAG systems is essential for fetching relevant documents from an external corpus.\nEffective retrieval ensures that the model's output is grounded in accurate information.",
+        "tiveness of the retrieval mechanism, we run ablations where we freeze the retriever\nduring training. As shown in Table 6, learned retrieval improves results for all tasks.\nWe compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace\nRAG’s retriever with a ﬁxed BM25 system, and use BM25 retrieval scores as logits when calculating\np(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are",
+        "e.\nThe Internet as a knowledge base\nMore related\nto our work, the search engine can assume the role\nof the retriever and use the Internet as the source of\nInput\nRetriever\nOutput\nDocuments\nInput\nWeb Search\nDocuments\nBlack-box LLM\nQuery\nInput\nDocuments\nQuery\nOutput\nOutput\nReward\nInput:\nWhat profession does Nicholas Ray and \nElia Kazan have in common?\nQuery: Nicholas Ray profession\nNicholas Ray American author and \ndirector, original name Raymond \nNicholas Kienzle, born August 7,"
+      ],
+      "execution_time": 3.1332430839538574,
+      "category": "technical",
+      "query_id": 41,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Explain the concept of semantic search in RAG",
+      "answer": "The text doesn't explicitly explain the concept of semantic search in RAG (Relevance-based Active Gathering). However, it does provide some context and background information related to semantic search. Based on the provided context, we can make an educated guess.\n\nIn RAG, the goal is to identify terms that contribute most to the ranking of top-k documents for a given query. The concept of semantic search in RAG seems to be related to finding these influential terms (w ∈ Tq) that preserve most of the preference pairs when an expanded query q ∪ Tq using RE (a retrieval model) is used.\n\nIn essence, the approach aims to explain why certain documents are ranked higher than others by identifying the terms that contribute most to their relevance. This is achieved by analyzing the importance of each term in relation to the document and query, and then selecting those terms that preserve most of the preference pairs when an expanded query is used.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1906.02329_2019.pdf",
+        "arxiv_1610.08136_2016.pdf",
+        "arxiv_1809.05190_2018.pdf"
+      ],
+      "scores": [
+        0.17075546619612256,
+        0.15789725516140427,
+        0.15403557501594314
+      ],
+      "contexts": [
+        "s search history Q, a search\ntask Tk is a maximum subset of queries in Q, such that all the queries\nin Tk correspond to a particular information need.\nAs a result, {Tk }K\nk=1 is a set of disjoint partitions of a user’s search\nhistory Q: ∀j , k, Tj ∩Tk = ∅and Q = Ð\nk Tk. A related concept\nin IR literature is search session [24], which is usually defined by\nthe inactive time between two consecutive search queries. Some\npast research assumes each search session can associate with only",
+        "d. Such caching strategies, if\nemployed effectively, can mitigate large part of the runtime cost of\nrunning a DNN based document ranking model at scale.\n7.\nRELATED WORK\nRepresentations of data can be local or distributed. In a local\nrepresentation a single unit represents an entity, for example there\nis a particular memory cell that represents the concept of a grand-\nmother. That cell should be active if and only if the concept of a\ngrandmother is present.",
+        "ves\nπ given q and RBB .\n4\nAPPROACH\nTo explain the top-k documents we should be in principle be able\nto explain all preference pairs dπ −1(i) ≻dπ −1(j) where i < j ≤k. In\nwhat follows we try to identify terms w ∈Tq such that an expanded\nquery q ∪Tq using RE preserves most of the preference pairs.\nTowards this, we make another simplifying assumption based on\nthe importance of a term given a document and query that typically\nholds true in many reasonably well performing classical retrieval\nmodels."
+      ],
+      "execution_time": 6.7349019050598145,
+      "category": "technical",
+      "query_id": 42,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do attention mechanisms work in RAG systems?",
+      "answer": "In RAG (Retrieval-Augmentation-Generation) systems, attention mechanisms play a crucial role in managing context and relevance across different parts of the input and retrieved text. Specifically:\n\n1. **Self-attention**: Self-attention is used within the LLM to manage context and relevance across different parts of the input and retrieved text.\n2. **Cross-attention**: Cross-attention mechanisms are used when integrating retrieved information into the generative model, ensuring that the most relevant pieces of information are emphasized during generation.\n\nAdditionally, temporal attention mechanisms are employed in some RAG systems for modeling the temporal dynamics of video contents, while high-level semantic attributes are utilized to demonstrate effectiveness in visual understanding tasks.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2404.07143.pdf",
+        "2410.12837.pdf",
+        "arxiv_1707.06355_2017.pdf"
+      ],
+      "scores": [
+        0.2537256955712495,
+        0.23264966465441106,
+        0.22003090561950892
+      ],
+      "contexts": [
+        "a attention\nmechanism (Bahdanau et al., 2014; Vaswani et al., 2017) and builds in both masked local\nattention and long-term linear attention mechanisms in a single Transformer block.\nSuch a subtle but critical modification to the Transformer attention layer enables a natural\nextension of existing LLMs to infinitely long contexts via continual pre-training and fine-\ntuning.\nOur Infini-attention reuses all the key, value and query states of the standard attention",
+        "etrieved documents, either independently (pointwise) or by comparing document pairs (pairwise). RAG\nsystems utilize self-attention within the LLM to manage context and relevance across different parts of the\ninput and retrieved text. Cross-attention mechanisms are used when integrating retrieved information into\nthe generative model, ensuring that the most relevant pieces of information are emphasized during\ngeneration.\n2.3 Generator Mechanisms in RAG Systems",
+        "a woman boiling in a\npot of water?\" requires the collective information from multiple\nvideo frames. Recently, temporal attention mechanisms have been\nshown to its eﬀectiveness on critical frame extraction for video\nrepresentation learning [14]. Thus, we then employ the temporal\nattention mechanisms to model the temporal dynamics of video\ncontents. On the other hand, the utilization of high-level semantic\nattributes has demonstrated the eﬀectiveness in visual understand-\ning tasks [13]."
+      ],
+      "execution_time": 5.466665267944336,
+      "category": "technical",
+      "query_id": 43,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the purpose of document encoding in RAG?",
+      "answer": "The purpose of document encoding in RAG (Recurrent Attentive Graph) is to create a \"document aware query encoding\" that can be used to encode each position of the query. This is done by calculating the element-wise distance between the attention-based document representation and a separate embedding for each position of the query, resulting in the document-aware query encoding qei ∈Rhq.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1911.00964_2019.pdf",
+        "arxiv_1806.03529_2018.pdf",
+        "arxiv_1812.02971_2018.pdf"
+      ],
+      "scores": [
+        0.2489563720471314,
+        0.2409060797240347,
+        0.23944937273899486
+      ],
+      "contexts": [
+        "w:\nsaei =\nhd\nX\nj=1\naw′i\nj · mradj\n(11)\nThe element-wise distance (euclidean) between the attention-\nbased document representation saei and mraqi is, further,\ncalculated and adopted as document aware query encoding\nqei ∈Rhq that can be deﬁned as a document aware query\nFig. 3. Multi-Resolution n-Gram Attention\nFig. 4. Document Aware Query Attention\nencoding of i-th position of a query. The ﬁnal output represen-\ntations of encoder fe(·, ·) is a document aware query encoding",
+        "the output logits with softmax:\nai = FFNN(uqi)\n;\nαi =\neai\nPn\nk=1 eak\nObservation sequence encoding\nThe observation sequence encoding ho is obtained in an analogous\nmanner to hq, except that we use a LSTM rather than a BiLSTM.\nAnswer prediction encoding\nThe answer prediction encoding hz is obtained by running the answer\nprediction tokens through a LSTM, and concatenating the last hidden state with the input feature vector\nφz:\n{uz1, ..., uzr} = LSTM(ez1, ..., ezr)\nuzk := −−−−→",
+        "through a single layer of a bidirectional LSTM where it is \nsummarized into a single dense vector. We remove the last \ndense layers of the original BiDAF architecture (that follow the \nmodeling layer) and instead concatenate the BiDAF encoding \nof the question and context with the answer encoding (on the \ntime axis). After that, the model transforms the (question, \ncontext) encoding and the answer representation via a \nbidirectional LSTM. The output stage of the network is a feed-"
+      ],
+      "execution_time": 4.32220983505249,
+      "category": "technical",
+      "query_id": 44,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does RAG handle out-of-domain queries?",
+      "answer": "The text doesn't explicitly mention how RAG handles out-of-domain queries, but it does provide a few strategies for improving the accuracy of LLMs on out-of-domain tasks, such as:\n\n* Few-shot (In-context learning): Providing few in-context samples in the prompt to improve the out-of-domain generalization of LLMs.\n* Chain-of-Thought (CoT): It aims to solve complex problems by decomposing them into smaller steps.\n\nAdditionally, it mentions that PPI (Pointwise Mutual Information) can mitigate the decrease in judge performance for certain tasks, such as FEVER, which implies that RAG may use some form of signal or indicator to help handle out-of-domain queries. However, without further information, it is difficult to provide a definitive answer on how RAG specifically handles out-of-domain queries.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2311.09476.pdf",
+        "2410.12837.pdf",
+        "2402.14558.pdf"
+      ],
+      "scores": [
+        0.1348024888306263,
+        0.13372437233839038,
+        0.1328868057880091
+      ],
+      "contexts": [
+        "e fine-tuned LLM judge’s accuracy significantly dropped out-of-domain (e.g. answer relevance for NQ\nto FEVER), PPI mitigated the decrease in judge performance. In the table, we define PPI range as the number of\npercentage points from the lower bound to the upper bound of the PPI confidence interval.\nQuery\nPassage\nAnswer\nContext\nRelevance\nAnswer\nRelevance\nHow can a ball that is not\nmoving possess energy\nof position?\nMechanical energy is a combination of the energy of motion or position.",
+        "ution from foundational concepts to the current state of the art. RAG combines retrieval mechanisms\nwith generative language models to enhance the accuracy of outputs, addressing key limitations of LLMs.\nThe study explores the basic architecture of RAG, focusing on how retrieval and generation are integrated\nto handle knowledge-intensive tasks. A detailed review of the significant technological advancements in",
+        "utilize the LLM’s capabilities.\nThese strategies can be grouped into the following\nfour categories.\n• Zero-shot: Infer the LLMs without provid-\ning any background context.\n• Few-shot (In-context learning):\nProvide\nfew in-context samples in the prompt to im-\nprove the out-of-domain generalization of\nLLMs. In this strategy, the number of samples\nin the ‘in-context learning’ is limited (Mos-\nbach et al., 2023).\n• Chain-of-Thought (CoT): It aims to solve\ncomplex problems by decomposing them into"
+      ],
+      "execution_time": 6.082523822784424,
+      "category": "technical",
+      "query_id": 45,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Self-RAG and how does it differ from standard RAG?",
+      "answer": "Based on the context, Self-RAG stands for \"Self- RAG\" which refers to a model that uses self-retrieval. It seems that Self-RAG is an extension of the original RAG (Retrieval-Augmented Generator) model, where it incorporates self-retrieval capabilities.\n\nThe main difference between standard RAG and Self-RAG is that Self-RAG has the ability to retrieve information on its own, whereas standard RAG relies solely on external retrieval mechanisms.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Corrective_RAG_2024.pdf",
+        "Corrective_RAG_2024.pdf",
+        "Corrective_RAG_2024.pdf"
+      ],
+      "scores": [
+        0.28786782590780724,
+        0.19275025577319851,
+        0.18255331691369991
+      ],
+      "contexts": [
+        "0\n61.8\nSelf-RAG\n29.0\n54.9\nSelf-RAG w. web\n24.9\n57.9\nTable 5: Comparison results between CRAG, Self-\nCRAG and RAG, Self-RAG with the same input in\nterms of accuracy.\nretrieval performance. A part of accurate retrieval\nresults were deliberately removed at random to\nimitate a low-quality retriever and evaluate how\nthe performance changed. Figure 3 demonstrated\nthe performance change of Self-RAG and Self-\nCRAG on the PopQA dataset.\nIt can be seen\nthat the generation performance of Self-RAG and",
+        "racy of generation\nno retrieval\nSelf-RAG\nSelf-CRAG\nFigure 3: The generation performance of Self-RAG\nand Self-CRAG given different retrieval performance\non the PopQA dataset with SelfRAG-LLaMA-7b. The\nlower horizontal line demonstrates the performance of\nthe generator without retrieval.\nLLaMA2-hf-7b SelfRAG-LLaMA2-7b\nPopQA\nCRAG\n54.9\n59.8\nRAG\n50.5\n52.8\nRAG w. web\n52.2\n53.8\nSelf-CRAG\n49.0\n61.8\nSelf-RAG\n29.0\n54.9\nSelf-RAG w. web\n24.9\n57.9\nTable 5: Comparison results between CRAG, Self-",
+        "RAG and\nSelf-RAG were consistently supplemented with\nweb search knowledge to ensure they had access\nto the same scope of the retrieved knowledge.\nThe results in Table 5 show that consistently\nsupplementing RAG or Self-RAG with web search\nknowledge can improve the performance in most\ncases (except Self-RAG w. web using the original\nLLaMA2 model), though the improvement remains\nlimited. Furthermore, augmenting RAG or Self-\nRAG with the proposed self-correction mechanism"
+      ],
+      "execution_time": 5.070380926132202,
+      "category": "approaches",
+      "query_id": 11,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Explain the concept of Corrective RAG (CRAG)",
+      "answer": "Corrective Retrieval-Augmented Generation (CRAG) is a proposed method that aims to self-correct the results of retriever models, which are used to retrieve relevant documents for a query. The main goal of CRAG is to improve the robustness and accuracy of generation by addressing issues with retrieval, such as returning inaccurate or incomplete results. To achieve this, CRAG involves using a lightweight retrieval evaluator that assesses the overall quality of retrieved documents and returns a confidence degree based on which knowledge retrieval actions can be triggered. This approach enables the model to adapt and correct its responses when retrieval from static and limited corpora is unsuccessful, thereby improving the overall quality of generated output.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Corrective_RAG_2024.pdf",
+        "Corrective_RAG_2024.pdf",
+        "arxiv_1610.08136_2016.pdf"
+      ],
+      "scores": [
+        0.24602024446291001,
+        0.22504503922245758,
+        0.1092700866233411
+      ],
+      "contexts": [
+        "arios\nwhere\nthe retriever returns inaccurate results.\nA\nmethod named Corrective Retrieval-Augmented\nGeneration (CRAG) is proposed to self-correct\nthe results of retriever and improve the utilization\nof documents for augmenting generation.\nA\nlightweight retrieval evaluator is designed to\nassess the overall quality of retrieved documents\nfor a query. This serves as a crucial component\nin RAG, contributing to informative generation\nby\nreviewing\nand\nevaluating\nthe\nrelevance",
+        "docu-\nments, raising concerns about how the model\nbehaves if retrieval goes wrong. To this end, we\npropose the Corrective Retrieval Augmented\nGeneration (CRAG) to improve the robustness\nof generation.\nSpecifically, a lightweight\nretrieval evaluator is designed to assess the\noverall quality of retrieved documents for a\nquery, returning a confidence degree based\non which different knowledge retrieval ac-\ntions can be triggered. Since retrieval from\nstatic and limited corpora can only return sub-",
+        "d. Such caching strategies, if\nemployed effectively, can mitigate large part of the runtime cost of\nrunning a DNN based document ranking model at scale.\n7.\nRELATED WORK\nRepresentations of data can be local or distributed. In a local\nrepresentation a single unit represents an entity, for example there\nis a particular memory cell that represents the concept of a grand-\nmother. That cell should be active if and only if the concept of a\ngrandmother is present."
+      ],
+      "execution_time": 6.1397271156311035,
+      "category": "approaches",
+      "query_id": 12,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does Hybrid RAG combine different retrieval methods?",
+      "answer": "Hybrid RAG combines different retrieval methods by integrating various retrieval strategies, such as dense and sparse retrieval, to achieve optimal performance for diverse tasks. Specifically, it involves adopting a linear interpolation method to combine the match scores of neural network-based models with language model scores between a (query, doc) pair.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "arxiv_1805.08159_2018.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.22913983855346848,
+        0.17707202451528306,
+        0.14495579703278255
+      ],
+      "contexts": [
+        "mechanisms that adapt to changing query patterns and content requirements. This includes developing\nmodels that can dynamically update their retrieval strategies based on new information and evolving user\nneeds. Investigating hybrid retrieval approaches that combine various retrieval strategies, such as dense\nand sparse retrieval, could enhance the effectiveness of RAG systems. Research should explore how to\nintegrate different retrieval methods to achieve optimal performance for diverse tasks.",
+        "(oi,yi) log oi[yi], where yi is the\nannotation label of sample i.\nInterpolation with Language Model\nVarious studies have shown that neural ranking models\nare good at capturing soft-match signals (Guo et al. 2016;\nXiong et al. 2017). However, are exact match signals still\nneeded for neural methods? We examine this hypothesis by\nadopting a commonly-used linear interpolation method to\ncombine the match scores of NN-based models with lan-\nguage model scores between a (query, doc) pair:",
+        "his\nlimitation has prompted the exploration of hybrid models that combine retrieval mechanisms with\ngenerative capabilities to ensure both fluency and factual correctness in outputs. There has been a\nsignificant rise in several research papers in this field and several new methods across the RAG\ncomponents have been proposed. Apart from new algorithms and methods, RAG has also seen steep\nadoption across various applications. However, there is a gap in a sufficient survey of this space tracking"
+      ],
+      "execution_time": 4.131939888000488,
+      "category": "approaches",
+      "query_id": 13,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the advantage of query rewriting in RAG?",
+      "answer": "According to the context, one of the advantages of query rewriting in Retrieval-Augmented Language Model (RAG) is that it improves scores on multiple-choice QA in most settings, except for the social sciences category. Additionally, with Vicuna as a reader, the method achieves more gains on four categories compared to ChatGPT.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2305.14283.pdf",
+        "2305.14283.pdf",
+        "2402.14558.pdf"
+      ],
+      "scores": [
+        0.21207239812358186,
+        0.21068742197265788,
+        0.19073062836527185
+      ],
+      "contexts": [
+        "PopQA, our trainable\nrewriter surpasses standard retrieval while being\ninferior to the LLM rewriter. This indicates that the\ndistillation of query rewriting is sub-optimal.\nThe scores on multiple-choice QA are presented\nin Table 3. With ChatGPT as a reader, it can be ob-\nserved that query rewriting improves the scores in\nmost of the settings, except for the social sciences\ncategory. With Vicuna as a reader, our method\nachieves more gains on the four categories com-\npared to ChatGPT.",
+        "timulus (e.g., keywords for summarization, or di-\nalogue actions for response generation), which is\nupdated according to the LLM reward.\nDifferent from the inspiring work mentioned\nabove, our proposed pipeline contains a query\nrewriting step in front of the retrieve-then-read\nmodule. We further propose a trainable scheme\nwith a small rewriting model, which is a novel\nenhancement for retrieval-augmented LLM by re-\nconstructing the search query.\n3\nMethodology",
+        "appending additional relevant terms, (ii) query ex-\npansion - rewriting the query based on relevant\nfeedback. They proposed a method for query dis-\nambiguation where a new query is formed by per-\nforming few-shot prompting. text-davinci-003 was\nemployed to retrieve a pseudo-document which\nis concatenated with the original query to form a\nnew query for the retrieval task. In this approach,\ninference is slowed down by token-by-token auto-\nregressive decoding strategy.\nIn another study,"
+      ],
+      "execution_time": 4.302609920501709,
+      "category": "approaches",
+      "query_id": 14,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Explain the re-ranking stage in Advanced RAG",
+      "answer": "Unfortunately, the provided context does not explicitly explain the re-ranking stage in Advanced RAG. However, I can make an educated guess based on the general understanding of Retrieval-Augmented Generation (RAG) techniques.\n\nIn RAG, the re-ranking stage typically refers to the process of selecting the most relevant or informative retrieval results from the retrieved documents or knowledge bases. This is often done using a ranking algorithm that evaluates the relevance and confidence of each retrieved result based on its similarity to the input query.\n\nIn Advanced RAG, the re-ranking stage might involve more sophisticated techniques, such as:\n\n1. Multi-task learning: The model learns to rank retrieval results across multiple tasks or domains, improving its ability to adapt to new contexts.\n2. Attention mechanisms: The model uses attention weights to selectively focus on the most relevant parts of each retrieved result, capturing specific entities, relationships, or concepts.\n3. Graph-based ranking: The model represents the retrieved results as a graph and uses graph algorithms (e.g., graph neural networks) to rank the nodes based on their relevance and connections to the input query.\n\nThese advanced techniques aim to improve the accuracy and efficiency of the re-ranking stage, enabling the language model to produce more accurate and informative outputs. However, without more specific information, it",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.16350588552441378,
+        0.16350588552441378,
+        0.16350588552441378
+      ],
+      "contexts": [
+        "g ways to enhance language models\nin the pre-training stage through retrieval-augmented techniques.\nadvanced RAG, and modular RAG. This review contex-\ntualizes the broader scope of RAG research within the\nlandscape of LLMs.\n• We identify and discuss the central technologies integral\nto the RAG process, specifically focusing on the aspects\nof “Retrieval”, “Generation” and “Augmentation”, and\ndelve into their synergies, elucidating how these com-",
+        "g ways to enhance language models\nin the pre-training stage through retrieval-augmented techniques.\nadvanced RAG, and modular RAG. This review contex-\ntualizes the broader scope of RAG research within the\nlandscape of LLMs.\n• We identify and discuss the central technologies integral\nto the RAG process, specifically focusing on the aspects\nof “Retrieval”, “Generation” and “Augmentation”, and\ndelve into their synergies, elucidating how these com-",
+        "g ways to enhance language models\nin the pre-training stage through retrieval-augmented techniques.\nadvanced RAG, and modular RAG. This review contex-\ntualizes the broader scope of RAG research within the\nlandscape of LLMs.\n• We identify and discuss the central technologies integral\nto the RAG process, specifically focusing on the aspects\nof “Retrieval”, “Generation” and “Augmentation”, and\ndelve into their synergies, elucidating how these com-"
+      ],
+      "execution_time": 9.12382698059082,
+      "category": "approaches",
+      "query_id": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is iterative RAG and when is it beneficial?",
+      "answer": "Iterative Retrieval (RAG) is not explicitly defined in the context provided. However, based on the description, it appears that Iterative Retrieval is a process where the knowledge base is repeatedly searched based on the initial query and the text generated so far.\n\nIt is beneficial because it provides a more comprehensive knowledge by continuously refining and expanding the search results through multiple iterations.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.21847080548453135,
+        0.21847080548453135,
+        0.21847080548453135
+      ],
+      "contexts": [
+        "d scope of information [105]. Many\nstudies have optimized the retrieval process in response to this\nissue, and we have summarised them in Figure 5.\nA. Iterative Retrieval\nIterative retrieval is a process where the knowledge base\nis repeatedly searched based on the initial query and the text\ngenerated so far, providing a more comprehensive knowledge\n11\nFig. 5. In addition to the most common once retrieval, RAG also includes three types of retrieval augmentation processes.",
+        "d scope of information [105]. Many\nstudies have optimized the retrieval process in response to this\nissue, and we have summarised them in Figure 5.\nA. Iterative Retrieval\nIterative retrieval is a process where the knowledge base\nis repeatedly searched based on the initial query and the text\ngenerated so far, providing a more comprehensive knowledge\n11\nFig. 5. In addition to the most common once retrieval, RAG also includes three types of retrieval augmentation processes.",
+        "d scope of information [105]. Many\nstudies have optimized the retrieval process in response to this\nissue, and we have summarised them in Figure 5.\nA. Iterative Retrieval\nIterative retrieval is a process where the knowledge base\nis repeatedly searched based on the initial query and the text\ngenerated so far, providing a more comprehensive knowledge\n11\nFig. 5. In addition to the most common once retrieval, RAG also includes three types of retrieval augmentation processes."
+      ],
+      "execution_time": 3.5513248443603516,
+      "category": "approaches",
+      "query_id": 46,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Explain the concept of fusion in hybrid RAG systems",
+      "answer": "The concept of fusion in hybrid RAG (Recurrent Autoencoder-based Generator) systems refers to the combination of retrieval and generation components. In traditional RAG systems, a generator is used to generate text based on input prompts or queries. However, this approach often lacks factual accuracy.\n\nTo address this limitation, hybrid RAG systems incorporate retrieval techniques to fetch relevant documents that can be used as inputs for the generator. The goal of fusion in these systems is to combine the strengths of both approaches: the retrieval component provides a foundation of facts and context, while the generation component produces coherent and fluent text.\n\nThe concept of fusion in hybrid RAG systems involves integrating the output of the retrieval component with the generator component to produce more accurate and informative results. This can be achieved through various techniques, such as contextual fusion, where the retrieved documents are used to inform the generation process, or by using the retrieved documents as input for the generator.\n\nIn essence, fusion in hybrid RAG systems aims to leverage the strengths of both retrieval and generation components to produce more accurate and informative results.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2401.05856.pdf",
+        "2410.12837.pdf",
+        "2401.05856.pdf"
+      ],
+      "scores": [
+        0.14110765021226682,
+        0.1394492673466727,
+        0.12853057092162543
+      ],
+      "contexts": [
+        "rate an answer from the included\ncontext. This facilitates continuously updating the knowledge with\nnew documents and also gives the control over what chunks the user\nis able to access. However, optimal strategies for chunk embedding,\nretrieval, and contextual fusion remain active research. Further\nwork should systematically compare finetuning and RAG paradigms\nacross factors including accuracy, latency, operating costs, and\nrobustness.\n6.3\nTesting and Monitoring RAG systems",
+        "hitectures (Vaswani et al. 2017), offered fluency and creativity but often lacked factual\naccuracy.\nThe development of hybrid systems combining retrieval and generation began to gain momentum as\nresearchers recognized the complementary strengths of both approaches. Early efforts in hybrid modeling\ncan be traced back to works like DrQA (Chen et al. 2017), which employed retrieval techniques to fetch\nrelevant documents for question-answering tasks.",
+        "ever, the application of RAG systems\nis broader than software engineering tasks. This paper comple-\nments existing work by presenting challenges faced during the\nimplementation of a RAG system with a focus on practitioners.\nErrors and failures that arise from RAG systems overlap with\nother information retrieval systems including 1) no metrics for\nquery rewriting, 2) document re-ranking, and 3) effective content\nsummarisation [19]. Our results confirm this The unique aspects"
+      ],
+      "execution_time": 6.270294904708862,
+      "category": "approaches",
+      "query_id": 47,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is adaptive retrieval in Self-RAG?",
+      "answer": "In the context of the provided text, Adaptive-RAG refers to a variant of the Self-Question Answering (RAG) model that uses an adaptive document retrieval strategy. This means that instead of using a fixed document count for retrieval, the Adaptive-RAG approach adapts its search strategy based on the complexity and requirements of the question being asked.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1808.06528_2018.pdf",
+        "arxiv_1808.06528_2018.pdf",
+        "2403.14403.pdf"
+      ],
+      "scores": [
+        0.27207529351308746,
+        0.2648170823573728,
+        0.25247325428822914
+      ],
+      "contexts": [
+        "omplexity over the linear relation-\nship.\n5\nExperiments\nWe ﬁrst compare our QA system with adaptive\ndocument retrieval against benchmarks from the\nliterature. Second, we speciﬁcally study the sen-\nsitivity of our adaptive approach to variations in\nthe corpus size. All our experiments draw upon\nthe DrQA implementation (Chen et al., 2017), a\nstate-of-the-art system for question answering in\nwhich we replaced the default module for docu-\nment retrieval with our adaptive scheme (but leav-",
+        "nt. This can considerably bolster the perfor-\nmance of deep QA systems across multiple bench-\nmarks. Third, we further demonstrate how cru-\ncial an adaptive document retrieval is in the con-\ntext of different corpus sizes. Here our adaptive\nstrategy presents a ﬂexible strategy that can suc-\ncessfully adapt to it and, compared to a ﬁxed doc-\nument count, accomplishes the best performance\nin terms of regret.\nReproducibility\nCode to integrate adaptive document retrieval",
+        "sers\nask queries with the same level of complexity,\nwhich emphasizes the importance of the need for\nadaptive strategies. Note that among the adaptive\nstrategies, our Adaptive-RAG shows remarkable\neffectiveness over the competitors (Table 1). This\nindicates that merely focusing on the decision of\nwhether to retrieve or not is suboptimal. Also, as\nshown in Table 2, such simple adaptive strategies\nare particularly inadequate for handling complex\nqueries in multi-hop datasets, which require ag-"
+      ],
+      "execution_time": 3.537957191467285,
+      "category": "approaches",
+      "query_id": 48,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does context enrichment improve RAG performance?",
+      "answer": "The provided context doesn't explicitly mention \"context enrichment\" improving RAG performance. However, I can provide an answer based on general knowledge of RAG (Relational Attention-based Graph) models and their potential benefits from enrichment techniques.\n\nContext enrichment is a technique that involves adding relevant contextual information to the input data, which can help improve the performance of various machine learning models, including graph-based models like RAG. By incorporating additional context, such as metadata, annotations, or external knowledge graphs, RAG can better capture the relationships between entities and generate more accurate and informative results.\n\nIn theory, context enrichment can improve RAG performance by:\n\n1. Enhancing entity recognition: Contextual information can help RAG identify relevant entities in the input data, leading to improved entity recognition and disambiguation.\n2. Refining attention mechanisms: Context enrichment can influence the attention weights assigned to different parts of the graph, allowing RAG to focus on more informative regions and generate better results.\n3. Capturing nuanced relationships: Additional context can help RAG understand subtle relationships between entities, leading to improved generation quality and reduced errors.\n\nHowever, without specific details from the provided context about how context enrichment is used in conjunction with LightRAG, it's difficult to provide a definitive answer on its",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.05779.pdf",
+        "0912.2822.pdf",
+        "0912.2822.pdf"
+      ],
+      "scores": [
+        0.21072472398150824,
+        0.1439647589509023,
+        0.12321700075373924
+      ],
+      "contexts": [
+        "posed\nLightRAG framework by addressing the following research questions: • (RQ1): How does LightRAG\ncompare to existing RAG baseline methods in terms of generation performance? • (RQ2): How do\ndual-level retrieval and graph-based indexing enhance the generation quality of LightRAG? • (RQ3):\nWhat specific advantages does LightRAG demonstrate through case examples in various scenarios? •\n(RQ4): What are the costs associated with LightRAG, as well as its adaptability to data changes?\n4.1",
+        "Data management in systems biology II– Outlook towards the semantic web \nGerhard Mayer, University of Stuttgart, Institute of Biochemical Engineering (IBVT), Allmandring 31, D-70569 \nStuttgart \n \nAbstract \nThe benefit of using ontologies, defined by the respective data standards, is shown. It is presented how \nontologies can be used for the semantic enrichment of data and how this can contribute to the vision of the \nsemantic web to become true.",
+        "ic enrichment of data and how this can contribute to the vision of the \nsemantic web to become true. The problems existing today on the way to a true semantic web are pinpointed, \ndifferent semantic web standards, tools and development frameworks are overlooked and an outlook towards \nartificial intelligence and agents for searching and mining the data in the semantic web are given, paving the \nway from data management to information and in the end true knowledge management systems."
+      ],
+      "execution_time": 8.62306809425354,
+      "category": "approaches",
+      "query_id": 49,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the role of web search in Corrective RAG?",
+      "answer": "The role of web search in Corrective RAG (Retrieval, Annotation, Generation) is to seek new sources of knowledge for correction when inaccurate information is retrieved.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Corrective_RAG_2024.pdf",
+        "0912.2822.pdf",
+        "0912.2822.pdf"
+      ],
+      "scores": [
+        0.1823051082449357,
+        0.17133173281459033,
+        0.1709481317709079
+      ],
+      "contexts": [
+        "re\nconsidered irrelevant, which are unhelpful for\ngeneration. Once the knowledge from the retrieval\nresults is judged to be inaccurate, it is unwise to\nstill get stuck in it, which is likely to result in\nfabricated facts. Therefore, we need to seek new\nsources of knowledge for correction. Here, web\nsearch is introduced to search from the Internet as\nelaborated in Section 4.5. This corrective action\nhelps overcome the embarrassing challenge where\nno reliable knowledge can be referred to.",
+        "ntic annotation of data like ontologies became \nmore and more popular. Even if the semantic web is \nstill in its infancy, a possible way from web 2.0 \ntowards web 3.0 and web 4.0 applications based on \nthe W3C semantic web model is described. It is \nshown that the today existing semantic web \nstandards and tools are not yet mature and \nconsolidated enough to quickly become reality, but \nthat a smooth transition towards a real semantic web \ncan be reached. \n \nONTOLOGIES",
+        "h apply techniques developed in the artificial \nintelligence community. One could speak of such an \nintelligent web making use of semantic annotations \nas the web 5.0. In addition the semantic web \ntechnologies bring about new impulses for the \nfurther enhancement of web 2.0 applications, e.g. \nthe advancement from wikis to semantic wikis \n[101,102] or from web services to semantic web \nservices [103] described by SWSL (Semantic Web \nService Language) [104] as part of the SWSF \n(Semantic \nWeb"
+      ],
+      "execution_time": 2.9516170024871826,
+      "category": "approaches",
+      "query_id": 50,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What metrics should be used to evaluate RAG systems?",
+      "answer": "Based on the provided context, here's a reformulated version of the question that includes a PREVIOUS ANSWER variable:\n\n6. Targets that contain brackets: Brackets in target should be dealt with in the following way. The full target should be substituted into the question in the correct place as one of the Gold Standards. The target without the bracketed word and with it should also be included in the Gold Standard.\n\nGiven this reformulation, a revised version of the answer could be:\n\nAnswer: The metrics that should be used to evaluate RAG systems are likely to include measures such as cosine similarity, Jaccard similarity, or precision-recall scores, which take into account the target and do not score reformulations without the target higher than with the target.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1304.7157_2013.pdf",
+        "arxiv_1304.7157_2013.pdf",
+        "arxiv_1304.7157_2013.pdf"
+      ],
+      "scores": [
+        0.2597773994164754,
+        0.2595284818296401,
+        0.23409512927535692
+      ],
+      "contexts": [
+        "ude a reference to a\nprevious question should be reformulated to include a PREVIOUS ANSWER\nvariable. Another reformulation should also be provided should a system\nknow it needs the answer to the previous question but has not found one.\nThis should be a reformulation of the previous question within the current\nquestion.\n6\n6. Targets that contain brackets: Brackets in target should be dealt with in the\nfollowing way. The full target should be substituted into the question in the",
+        "be dealt with in the\nfollowing way. The full target should be substituted into the question in the\ncorrect place as one of the Gold Standards. The target without the bracketed\nword and with it should also be included in the Gold Standard.\n7. Stemming and Synonyms: Words should not be stemmed and synonyms\nshould not be used unless they are found in the target or the current question\nseries. If they are found then both should be used in the Gold Standard.\n8.",
+        "SimMetrics library as it is an open source extensible library of Similarity or\nDistance Metrics 1.\nThe next task was to run the metrics provided by SimMetrics over the three\ndatasets and look to see which of the metrics score as we would expect over these\ndatasets. From these results we found that certain metrics were not appropriate.\nSome of them did the opposite to what we required them to do, in that they scored\na reformulation without the target higher than one with the target."
+      ],
+      "execution_time": 5.572789907455444,
+      "category": "evaluation",
+      "query_id": 16,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you measure faithfulness in RAG outputs?",
+      "answer": "According to the context, Faithfulness is measured using Cosine Similarity.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2311.09476.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.17916347524622286,
+        0.17144681520580748,
+        0.17144681520580748
+      ],
+      "contexts": [
+        "st-\ning ARES. By sampling both related and unrelated\ndocuments/answers, we hope to better gauge the\nefficacy of ARES in judging RAG outputs.\nWe do not evaluate answer faithfulness for KILT\nand SuperGLUE datasets since we do not have\nhuman-annotated hallucinated answers to use for\nevaluation. However, we do test the ARES frame-\nwork on real attribution datasets in Section 5.2.\nUsing the validation subsets for each KILT\nand SuperGLUE dataset, we create nine different",
+        "ctual Robustness\nAccuracy\nEM\nAccuracy\nAccuracy\nRECALL†\nGeneration Quality\nCounterfactual Robustness\nR-Rate (Reappearance Rate)\nRAGAS‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\nCosine Similarity\nARES‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\nAccuracy\nAccuracy\nAccuracy\nTruLens‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\n*\nCRUD†\nRetrieval Quality",
+        "ctual Robustness\nAccuracy\nEM\nAccuracy\nAccuracy\nRECALL†\nGeneration Quality\nCounterfactual Robustness\nR-Rate (Reappearance Rate)\nRAGAS‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\nCosine Similarity\nARES‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\nAccuracy\nAccuracy\nAccuracy\nTruLens‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\n*\nCRUD†\nRetrieval Quality"
+      ],
+      "execution_time": 2.7458791732788086,
+      "category": "evaluation",
+      "query_id": 17,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is RAGAS and how is it used for RAG evaluation?",
+      "answer": "RAGAS appears to be an automated evaluation framework, but its specific details are not provided. According to the context, RAGAS is a system that has been compared with ARES in terms of accuracy for evaluating RAG (Relevance-Adjusted Grading) configurations.\n\nIt can be inferred that RAGAS is used to evaluate and assess the relevance and answer faithfulness of RAG systems, but its exact functionality and methodology are not specified in the provided context.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2311.09476.pdf",
+        "2311.09476.pdf",
+        "2402.14558.pdf"
+      ],
+      "scores": [
+        0.20755481712883211,
+        0.17239663781931425,
+        0.1676770540813237
+      ],
+      "contexts": [
+        "S\nat predicting context relevance and answer rele-\nvance of a query-passage-answer triple. For con-\ntext relevance, ARES with a fine-tuned LLM-judge\nis 59.9 percentage points higher than RAGAS while\nfor answer relevance, our system is 14.4 percent-\nage points higher than RAGAS. Overall, ARES\nprovides a more accurate system for automatically\nevaluating RAG configurations than RAGAS by\nleveraging domain-adaptive techniques for prompt-\ning and training as well as utilizing PPI to bolster",
+        "can accurately score and rank RAG systems based\non context relevance, answer faithfulness, and an-\nswer relevance scores, beating the existing RAGAS\nautomated evaluation framework.\nARES is a flexible framework, and there may\nbe variants of it that are even more powerful than\nthe ones we explored here. Avenues to explore\ninclude GPT-4 as a replacement for human labeling\n(Table 4), more robust techniques for the synthetic\ndatasets used in fine-tuning LLM judges, utilizing",
+        "lowing\nresearch questions to be addressed in this work.\nRQ1. How do LLMs assist industrial applica-\ntions, and in what ways? RQ2. What are the pri-\nmary applications that industries are focusing on,\nincluding the associated datasets and evaluation\nmetrics? RQ3. What are the deployment chal-\nlenges, if any? RQ4. What are the potential direc-\ntions to maximize the utility of LLMs in industrial\napplications?\nWith this study, our objective is to answer the\nabove-mentioned research questions."
+      ],
+      "execution_time": 4.49787712097168,
+      "category": "evaluation",
+      "query_id": 18,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Explain the difference between retrieval and generation metrics",
+      "answer": "The question asks for an explanation of the difference between \"Retrieval Quality\" and \"Generation Quality\", but actually, it seems there is a repetition in the text provided. \n\nHowever, based on the context given, we can infer that Retrieval Quality refers to evaluating the performance of the retriever component (i.e., how well it retrieves relevant information or documents) using metrics such as Hit Rate, MRR, and NDCG.\n\nOn the other hand, Generation Quality is likely related to evaluating the performance of the generator component (i.e., how well it generates coherent and relevant text based on the retrieved context). The main evaluation objectives for Generation Quality are not explicitly stated in the provided text, but given the similarity with Retrieval Quality, we can infer that they would also involve standard metrics from search engines, recommendation systems, and information retrieval systems.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1304.7157_2013.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.20240991271228473,
+        0.17902591538617915,
+        0.17902591538617915
+      ],
+      "contexts": [
+        "them to do, in that they scored\na reformulation without the target higher than one with the target. This could be\ndue to over-emphasis on word ordering. These metrics were discounted at this\nstage. Other metrics were also discounted as the difference between “With Target”\nand “Without Target” was not large enough; it would have been difﬁcult to measure\nimprovements in the system with a small difference.\nThe four best performing metrics were: DiceSimilarity, JaccardSimilarity, Block-",
+        "main evaluation objectives include:\nRetrieval Quality. Evaluating the retrieval quality is crucial\nfor determining the effectiveness of the context sourced by\nthe retriever component. Standard metrics from the domains\nof search engines, recommendation systems, and information\nretrieval systems are employed to measure the performance of\nthe RAG retrieval module. Metrics such as Hit Rate, MRR, and\nNDCG are commonly utilized for this purpose [161], [162].\nGeneration Quality.",
+        "main evaluation objectives include:\nRetrieval Quality. Evaluating the retrieval quality is crucial\nfor determining the effectiveness of the context sourced by\nthe retriever component. Standard metrics from the domains\nof search engines, recommendation systems, and information\nretrieval systems are employed to measure the performance of\nthe RAG retrieval module. Metrics such as Hit Rate, MRR, and\nNDCG are commonly utilized for this purpose [161], [162].\nGeneration Quality."
+      ],
+      "execution_time": 5.5364580154418945,
+      "category": "evaluation",
+      "query_id": 19,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How can we detect hallucinations in RAG systems?",
+      "answer": "Based on the context provided, it appears that detecting hallucinations in RAG systems is a challenge. According to the text, hallucinations can occur due to over- or under-reliance on retrieved passages, and inconsistencies between retrieved passages and the generation model's output.\n\nAlthough the question asks how we can detect hallucinations, the context suggests that mitigating bias in retrieval and generation is an ongoing challenge. However, some potential strategies mentioned in related research directions include:\n\n* Identifying useful context through lexical and developing bias mitigation techniques for retrieval\n* Developing bias mitigation techniques for retrieval and generation in tandem\n\nIt's worth noting that the question asks how to detect hallucinations specifically, but the provided context focuses more on preventing or mitigating them.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "2410.12837.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.15186206521891213,
+        0.14413838011882238,
+        0.13999823861694594
+      ],
+      "contexts": [
+        "mless, leading to inconsistencies or factual hallucinations in the final response (Ji et al.\n2022).\nInterpretability and Transparency: Like many AI systems, RAG models are often treated as black\nboxes, with limited transparency in how retrieval influences generation. Improving the interpretability of\nthese models is crucial to fostering trust, especially in critical applications (Roller et al. 2020).\n6. Future Research Directions for Retrieval-Augmented Generation (RAG)",
+        "g et. al. 2023) , a method designed to enhance the quality of context provided to generative models\nin tasks like open-domain question answering and fact verification, addresses issues of over- or\nunder-reliance on retrieved passages, which can lead to problems such as hallucinations in the generated\noutputs. The method improves context quality by identifying useful context through lexical and",
+        "veloping bias mitigation techniques for retrieval\nand generation in tandem is an ongoing challenge.\nCoherence: RAG models often struggle with integrating the retrieved knowledge into coherent,\ncontextually relevant text. The alignment between retrieved passages and the generation model's output\nis not always seamless, leading to inconsistencies or factual hallucinations in the final response (Ji et al.\n2022)."
+      ],
+      "execution_time": 4.983341693878174,
+      "category": "evaluation",
+      "query_id": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the Lost in the Middle problem in RAG?",
+      "answer": "The \"Lost in the Middle\" problem refers to a phenomenon where Large Language Models (LLMs) tend to focus only on the beginning and end of long texts, while forgetting the middle portion. This can interfere with the final generation of LLMs and lead to irrelevant or inaccurate responses.",
+      "relevant_chunks": 3,
+      "sources": [
+        "RAG_Lewis_2020.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.2810433923309473,
+        0.1291838788222292,
+        0.1291838788222292
+      ],
+      "contexts": [
+        ": Examples from generation tasks. RAG models generate more speciﬁc and factually accurate\nresponses. ‘?’ indicates factually incorrect responses, * indicates partially correct responses.\nTask\nInput\nModel\nGeneration\nMS-\nMARCO\ndeﬁne middle\near\nBART\n?The middle ear is the part of the ear between the middle ear and the nose.\nRAG-T The middle ear is the portion of the ear internal to the eardrum.\nRAG-S The middle ear includes the tympanic cavity and the three ossicles.\nwhat currency\nneeded in",
+        "ion to the LLM for answering questions.\nFollowing will introduce adjustments from two perspectives:\nadjusting the retrieved content and adjusting the LLM.\nA. Context Curation\nRedundant information can interfere with the final gener-\nation of LLM, and overly long contexts can also lead LLM\nto the “Lost in the middle” problem [98]. Like humans, LLM\ntends to only focus on the beginning and end of long texts,\nwhile forgetting the middle portion. Therefore, in the RAG",
+        "ion to the LLM for answering questions.\nFollowing will introduce adjustments from two perspectives:\nadjusting the retrieved content and adjusting the LLM.\nA. Context Curation\nRedundant information can interfere with the final gener-\nation of LLM, and overly long contexts can also lead LLM\nto the “Lost in the middle” problem [98]. Like humans, LLM\ntends to only focus on the beginning and end of long texts,\nwhile forgetting the middle portion. Therefore, in the RAG"
+      ],
+      "execution_time": 3.200160026550293,
+      "category": "challenges",
+      "query_id": 21,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does context length affect RAG performance?",
+      "answer": "The question is answered in the provided text as follows:\n\nContext length affects RAG (Retrieval-Augmentation Generation) performance. Specifically, the results show that varying the length penalty factor α can significantly impact model performance.\n\nIn particular, a small value of α tends to generate long phrases, while a big value of α produces shorter phrases.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.05779.pdf",
+        "arxiv_1905.07689_2019.pdf",
+        "2404.07143.pdf"
+      ],
+      "scores": [
+        0.22670759240381996,
+        0.17040954133067499,
+        0.1558391582249397
+      ],
+      "contexts": [
+        "posed\nLightRAG framework by addressing the following research questions: • (RQ1): How does LightRAG\ncompare to existing RAG baseline methods in terms of generation performance? • (RQ2): How do\ndual-level retrieval and graph-based indexing enhance the generation quality of LightRAG? • (RQ3):\nWhat specific advantages does LightRAG demonstrate through case examples in various scenarios? •\n(RQ4): What are the costs associated with LightRAG, as well as its adaptability to data changes?\n4.1",
+        "tends to\ntake effect at the begin of the keyphrase extraction process.\n5.3.3\nLength Penalty Factor. Fianlly, we investigate how the length\npenalty factor α affects the performance of the DivGraphPointer.\nResults with different values of length penalty factorα are presented\nin Table 6. Results show that the length penalty factors affect the\nmodel performance significantly. Either a small value of α (e.g.,\nα=0), which tends to generate long phrase, or a big value of α (e.g.,",
+        "2024).\nThe passkey task hides a random number into a long text and asks it back at the model\noutput. The length of the distraction text is varied by repeating a text chunk multiple times.\nThe previous work (Chen et al., 2023a) showed that a 8B LLaMA model can solve the task up\nto 32K length when fine-tuned with the same 32K length inputs with Position Interpolation.\nWe take this challenge further and fine-tune on only 5K length inputs to test on 1M length\nregime.\nInput length"
+      ],
+      "execution_time": 3.34671688079834,
+      "category": "challenges",
+      "query_id": 22,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the common failure modes of RAG systems?",
+      "answer": "The question doesn't have an explicit answer provided in the given context. However, based on the text, we can infer some common failure modes of RAG systems:\n\n1. Limited knowledge or understanding of the domain: The fact that a non-expert reviewer may not perform better than a large language model (LLM) suggests that RAG systems may be vulnerable to this issue.\n2. Inadequate training data: BioASQ is a domain-specific dataset, and the reviewers were not experts in this domain. This highlights the importance of using high-quality, relevant training data for LLMs.\n3. Over-reliance on LLMs: RAG systems rely heavily on LLMs, which can lead to failure modes such as:\n4. Inability to handle complex or nuanced questions.\n5. Limited ability to understand context or subtlety in language.\n6. Failure to recognize incorrect answers when provided by the LLM.\n\nThe text also mentions \"limitations inherent to information retrieval systems\" and \"reliance on LLMs\", which suggests that RAG systems may be susceptible to common failure modes in these areas as well.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2401.05856.pdf",
+        "2306.05685.pdf",
+        "2401.05856.pdf"
+      ],
+      "scores": [
+        0.2751996957031296,
+        0.20848471039129404,
+        0.17684838885630264
+      ],
+      "contexts": [
+        "a human rater for this domain.\nHowever, one threat to validity with this finding is that BioASQ is\na domain specific dataset and the reviewers were not experts i.e.\nthe large language model may know more than a non-expert.\n5\nFAILURE POINTS OF RAG SYSTEMS\nFrom the case studies we identified a set of failure points presented\nbelow. The following section addresses the research question What\nare the failure points that occur when engineering a RAG system?",
+        "2.5%\nrename\n51.2%\n38.8%\n6.2%\n3.8%\nGPT-4\ndefault\n65.0%\n30.0%\n5.0%\n0.0%\nrename\n66.2%\n28.7%\n5.0%\n0.0%\nTable 3: Failure rate under “repetitive list” at-\ntack for different LLM judges on 23 answers.\nJudge\nClaude-v1\nGPT-3.5\nGPT-4\nFailure rate\n91.3%\n91.3%\n8.7%\nTable 4: Judge failure rate on 10 math questions\nwith different prompts. We test LLaMA-13B vs.\nVicuna-13B and swap positions. A failure means\nwhen GPT-4 says an incorrect answer is correct.\nDefault\nCoT\nReference\nFailure rate\n14/20\n6/20\n3/20",
+        "s/references\nto generated responses, and c) remove the need for annotating\ndocuments with meta-data. However, RAG systems suffer from lim-\nitations inherent to information retrieval systems and from reliance\non LLMs. In this paper, we present an experience report on the\nfailure points of RAG systems from three case studies from separate\ndomains: research, education, and biomedical. We share the lessons\nlearned and present 7 failure points to consider when designing a\nRAG system."
+      ],
+      "execution_time": 6.78998327255249,
+      "category": "challenges",
+      "query_id": 23,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How can RAG systems handle multi-hop reasoning?",
+      "answer": "RAG (Representational Ability for General) systems can handle multi-hop reasoning by allocating more resources to process complex queries, allowing them to efficiently handle both single-hop and multi-hop questions. This is demonstrated in the validation of the Adaptive-RAG system on a collection of open-domain QA datasets, which shows that it enhances overall accuracy and efficiency compared to existing one-size-fits-all approaches.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2403.14403.pdf",
+        "arxiv_1711.07163_2017.pdf",
+        "2403.14403.pdf"
+      ],
+      "scores": [
+        0.13820595601794033,
+        0.12489256589101672,
+        0.12203804172029793
+      ],
+      "contexts": [
+        "document retrieval, it benefits significantly from\nour Adaptive-RAG in terms of effectiveness when\nsolving complex multi-hop queries.",
+        "th ACM SIGSOFT International Symposium on Foun-\ndations of Software Engineering, pp. 216–234, 1999.\nSahil Bhatia and Rishabh Singh. Automated correction for syntax errors in programming assign-\nments using recurrent neural networks. CoRR, abs/1603.06129, 2016.\nSamuel R Bowman. Can recursive neural tensor networks learn logical reasoning? arXiv preprint\narXiv:1312.6192, 2013.\nJacob Devlin, Jonathan Uesato, Surya Bhupatiraju, Rishabh Singh, Abdel rahman Mohamed, and\nPushmeet Kohli.",
+        "iases in datasets. We validated our Adaptive-RAG\non a collection of open-domain QA datasets, cover-\ning the multiple query complexities including both\nthe single- and multi-hop questions. The results\ndemonstrate that our Adaptive-RAG enhances the\noverall accuracy and efficiency of QA systems, al-\nlocating more resources to handle complex queries\nwhile efficiently handling simpler queries, com-\npared to the existing one-size-fits-all approaches"
+      ],
+      "execution_time": 4.098117113113403,
+      "category": "challenges",
+      "query_id": 24,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the scalability challenges in RAG systems?",
+      "answer": "According to the context, one of the primary scalability challenges for RAG models is that retrieval-based single answer grading becomes unstable when the number of players increases. This is because the number of possible pairs grows quadratically with an increase in the number of players, making it difficult for single answer grading to discern subtle differences between specific pairs and resulting in absolute scores that fluctuate more than relative pairwise results if the judge model changes.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "2306.05685.pdf",
+        "arxiv_1610.09769_2016.pdf"
+      ],
+      "scores": [
+        0.37747080952788,
+        0.21678402652341894,
+        0.19946899950799526
+      ],
+      "contexts": [
+        "ng task-specific challenges and advancing multilingual information access for\nglobal inclusivity.\n5. Current Challenges and Limitations in Retrieval-Augmented Generation (RAG):\nThis section intends to highlight the current challenges and limitations of RAG considering the current\nlandscape of the system and this would shape the future research directions in the field.\nScalability and Efficiency: One of the primary challenges for RAG models is scalability. As retrieval",
+        "ack\nscalability when the number of players increases, given that the number of possible pairs grows\nquadratically; single answer grading may be unable to discern subtle differences between specific\npairs, and its results may become unstable, as absolute scores are likely to fluctuate more than relative\npairwise results if the judge model changes.\n3.2\nAdvantages of LLM-as-a-Judge\nLLM-as-a-judge offers two key benefits: scalability and explainability. It reduces the need for human",
+        "les are optimized\nduring training, the AUC scores keep an increasing trend\nand ﬁnally converge.\n5.6\nScalability and Parallelization\nWe investigate the eﬃciency of ESim by considering both\nthe scalability and the parallelization as shown in Fig. 3(a).\nWe try diﬀerent portions of network sizes (i.e., |V | + |E|) in\nthe two networks and run our best performing models, i.e.,\nESim-pair using A−P−V −P−A and using A−P−A on the\nDBLP dataset, as well as ESim-pair using B−R−W−R−B\non the Yelp dataset."
+      ],
+      "execution_time": 4.882045030593872,
+      "category": "challenges",
+      "query_id": 25,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the optimal chunk size for RAG systems?",
+      "answer": "Unfortunately, the provided context does not mention an optimal chunk size for RAG systems. The text appears to be a list of various models and their corresponding attributes, but it does not provide any information on chunk sizes or what constitutes an \"optimal\" chunk size.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.33957514481828993,
+        0.33957514481828993,
+        0.33957514481828993
+      ],
+      "contexts": [
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki",
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki",
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki"
+      ],
+      "execution_time": 4.269633054733276,
+      "category": "implementation",
+      "query_id": 26,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How should chunk overlap be configured in RAG?",
+      "answer": "Based on the provided context, I do not see any information about configuring chunk overlap in RAG. However, according to the text, it is mentioned that \"Tuning\" should be used for Chunk in various models, including RAG-Robust [48]. This could imply that tuning may be used to adjust parameters, but it does not explicitly state how chunk overlap should be configured.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.3414347437969083,
+        0.3414347437969083,
+        0.3414347437969083
+      ],
+      "contexts": [
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki",
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki",
+        "[27]\nCommon Crawl,Wikipedia\nText\nChunk\nTuning\nOnce\nRAG-Robust [48]\nWikipedia\nText\nChunk\nTuning\nOnce\nRA-Long-Form [49]\nDataset-base\nText\nChunk\nTuning\nOnce\nCoN [50]\nWikipedia\nText\nChunk\nTuning\nOnce\nSelf-RAG [25]\nWikipedia\nText\nChunk\nTuning\nAdaptive\nBGM [26]\nWikipedia\nText\nChunk\nInference\nOnce\nCoQ [51]\nWikipedia\nText\nChunk\nInference\nIterative\nToken-Elimination [52]\nWikipedia\nText\nChunk\nInference\nOnce\nPaperQA [53]\nArxiv,Online Database,PubMed\nText\nChunk\nInference\nIterative\nNoiseRAG [54]\nFactoidWiki"
+      ],
+      "execution_time": 3.8527169227600098,
+      "category": "implementation",
+      "query_id": 27,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What embedding models are best for RAG retrieval?",
+      "answer": "Unfortunately, there is no information provided about RAG retrieval or the specific embedding models that would be best suited for it. The context appears to be related to knowledge graph-based question answering systems and large language models (LLMs), but it does not mention RAG retrieval specifically.\n\nIf you could provide more context or clarify what RAG retrieval is, I may be able to help you better.",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1903.11406_2019.pdf",
+        "arxiv_1903.11406_2019.pdf",
+        "2402.14558.pdf"
+      ],
+      "scores": [
+        0.14661101236492952,
+        0.1411076757335808,
+        0.14021574846479787
+      ],
+      "contexts": [
+        "푡, and relation 푟, respectively. The\ntrilinear-product-based score function for the three embedding\nvectors is denoted as ⟨풉, 풕, 풓⟩and will be deﬁned mathematically\nin Section 2.\nHowever, the implementations of embedding vectors for the\nvarious models are very diverse. DistMult [35] uses one real-\nvalued embedding vector for each entity or relation. The original\nCP [13] uses one real-valued embedding vector for each relation,\nbut two real-valued embedding vectors for each entity when it is",
+        "his provides an intuitive perspective\non using the embedding vectors in complicated models. For the\nComplEx model, instead of using a complex-valued embedding\nvector, we can treat it as two real-valued embedding vectors.\nThese vectors can then be used directly in common learning\nalgorithms that take as input real-valued vectors rather than\ncomplex-valued vectors. We also see that multiple embedding\nvectors are a natural extension of single embedding vectors. Given",
+        "lowing\nresearch questions to be addressed in this work.\nRQ1. How do LLMs assist industrial applica-\ntions, and in what ways? RQ2. What are the pri-\nmary applications that industries are focusing on,\nincluding the associated datasets and evaluation\nmetrics? RQ3. What are the deployment chal-\nlenges, if any? RQ4. What are the potential direc-\ntions to maximize the utility of LLMs in industrial\napplications?\nWith this study, our objective is to answer the\nabove-mentioned research questions."
+      ],
+      "execution_time": 4.375799179077148,
+      "category": "implementation",
+      "query_id": 28,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you choose the number of retrieved documents (top-k)?",
+      "answer": "According to Figure 2, the recall is increasing while the avg. number relevant documents is also growing as top-n configuration increases, which suggests that a higher top-n value would result in more relevant documents being returned. \n\nTo answer the question:\n\nYou choose the number of retrieved documents (top-k) based on how much information you want to retrieve and your available resources.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2403.05530.pdf",
+        "arxiv_1808.06528_2018.pdf",
+        "2403.05530.pdf"
+      ],
+      "scores": [
+        0.20527249771199715,
+        0.20207426855768118,
+        0.19344316787592963
+      ],
+      "contexts": [
+        "tion.\nKeep the answer short and terse. Do not paraphrase or reformat the text you see in the\nimage.\nFor question about age difference, try to identify who are the people and on which year\nwere they born. Then calculate their age difference.\nFor multiple choice questions, if you find that your reasoning lead to none of the\nchoice, reject your reasoning and choose the most likely answer. You have to answer with\none of the choices for multiple choice questions. In any case, never refuse to answer.",
+        ", as the correct an-\n(a) Recall\n(b) Avg number of\nrelevant documents\n0.2\n0.4\n0.6\n0.8\n1.0\n2\n4\n6\n8\n10\ntop−n retrieved documents\nrecall\n1\n2\n3\n4\n5\n2\n4\n6\n8\n10\ntop−n retrieved documents\navg. number relevant documents\nFigure 2: Recall (a) and average number of rel-\nevant documents (b) for growing top-n conﬁgu-\nrations and a static corpus size (full Wikipedia\ndump). While the recall is converging the number\nof relevant documents keeps growing resulting in\na higher density of relevant information.",
+        "same position.\nQuestion: You are given an image, a question, and a number of options to answer the\nquestion as follows:\nQuestion:\nIs the flag red or white?\nOptions:\nThe color of the flag is white.\nThe color of the flag is red.\nAnswer instructions: Choose the most likely option. If you find that it is impossible to\nanswer the question or none of the options are correct choose the most likely option.\nOnly answer with the most likely option verbatim without any extra words or changes to"
+      ],
+      "execution_time": 4.264972925186157,
+      "category": "implementation",
+      "query_id": 29,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What vector databases are commonly used for RAG?",
+      "answer": "The answer is not explicitly stated in the context, but based on common knowledge about the RAG (Rapid Automatic Generation) system, it is likely that the vector database used by the system is a variant of Word2Vec or GloVe. However, the specific vector databases used are not mentioned in the provided context.\n\nIn general, Word2Vec and GloVe are two popular variants of word embeddings that can be used for RAG-like applications.",
+      "relevant_chunks": 3,
+      "sources": [
+        "0911.2723.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.16365165989675448,
+        0.15445843867090336,
+        0.15445843867090336
+      ],
+      "contexts": [
+        "tentially different functions at relevant interfaces (Leydesdorff & \nVan den Besselaar, 1997). \n \n2. Methods and materials \n \n2.1  \nMaterials \n \nThe data was harvested from the Journal Citation Reports of the Science Citation Index \nand the Social Science Citation Index 2004. The descriptive statistics of the two databases \nand the effects of their combination are provided in Table 2. The two databases contain \n5,968 and 1,712 journals, respectively, or a total of 7,680 journals.",
+        "entations using an embedding model\nand stored in vector database. This step is crucial for enabling\nefficient similarity searches in the subsequent retrieval phase.\nRetrieval. Upon receipt of a user query, the RAG system\nemploys the same encoding model utilized during the indexing\nphase to transform the query into a vector representation.\nIt then computes the similarity scores between the query\nvector and the vector of chunks within the indexed corpus.",
+        "entations using an embedding model\nand stored in vector database. This step is crucial for enabling\nefficient similarity searches in the subsequent retrieval phase.\nRetrieval. Upon receipt of a user query, the RAG system\nemploys the same encoding model utilized during the indexing\nphase to transform the query into a vector representation.\nIt then computes the similarity scores between the query\nvector and the vector of chunks within the indexed corpus."
+      ],
+      "execution_time": 4.5851969718933105,
+      "category": "implementation",
+      "query_id": 30,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Compare BM25 and dense vector retrieval methods",
+      "answer": "BM25 and Dense Passage Retrieval (DPR) are two different information retrieval algorithms used to rank documents according to relevance.\n\nBM25 is a traditional method that uses term frequency-inverse document frequency (TF-IDF) to retrieve documents. It is effective for tasks involving simpler, keyword-based queries. However, it may not outperform more modern retrieval models like DPR in semantically complex tasks.\n\nDense Passage Retrieval (DPR), on the other hand, represents a more modern approach that uses a dense vector space in which both the query and the passage are represented as vectors. This method is particularly effective for semantically complex tasks and tends to outperform BM25 in such cases.\n\nIn summary, while BM25 is simple and efficient, it may not be as effective as DPR in semantically complex tasks. However, BM25 still performs well on simpler queries and remains a widely used retrieval mechanism due to its simplicity and efficiency.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "RAG_Lewis_2020.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.32428940623392905,
+        0.305326103106715,
+        0.30420481615343475
+      ],
+      "contexts": [
+        "nal corpus.\nEffective retrieval ensures that the model's output is grounded in accurate information. Several retrieval\nmechanisms are commonly used, ranging from traditional methods like BM25 to more sophisticated\ntechniques like Dense Passage Retrieval (DPR).\n2.2.1 BM25\nBM25 is a well-established information retrieval algorithm that uses the term frequency-inverse document\nfrequency (TF-IDF) to rank documents according to relevance. Despite being a classical method, BM25",
+        "tiveness of the retrieval mechanism, we run ablations where we freeze the retriever\nduring training. As shown in Table 6, learned retrieval improves results for all tasks.\nWe compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace\nRAG’s retriever with a ﬁxed BM25 system, and use BM25 retrieval scores as logits when calculating\np(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are",
+        "s limitation, BM25 is still widely used because of its simplicity and efficiency. BM25 is effective\nfor tasks involving simpler, keyword-based queries, although more modern retrieval models like DPR tend\nto outperform it in semantically complex tasks.\n2.2.2 Dense Passage Retrieval (DPR)\nDense Passage Retrieval (DPR), introduced by Karpukhin et al. (2020), represents a more modern\napproach to information retrieval. It uses a dense vector space in which both the query and the"
+      ],
+      "execution_time": 6.542191982269287,
+      "category": "comparison",
+      "query_id": 31,
+      "difficulty": "medium"
+    },
+    {
+      "question": "When should you use Naive RAG vs Advanced RAG?",
+      "answer": "Unfortunately, the provided context does not explicitly state when to use Naive RAG versus Advanced RAG. However, based on the information given, it can be inferred that Naive RAG is the earliest methodology and has limitations, whereas Advanced RAG was developed as a response to these shortcomings.\n\nIt is likely that you should use Naive RAG for:\n\n* Simple applications or tasks where cost-effectiveness and basic performance are sufficient\n* Developmental stages or prototyping where more advanced features are not yet necessary\n\nIn contrast, Advanced RAG might be used when:\n\n* You need more advanced features or capabilities beyond the original limitations of Naive RAG\n* You require better performance than the native LLM\n* You are working on a project that requires more sophisticated techniques and approaches",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.35349443745899223,
+        0.35349443745899223,
+        0.35349443745899223
+      ],
+      "contexts": [
+        "rize it into three stages: Naive RAG, Advanced\nRAG, and Modular RAG, as showed in Figure 3. Despite\nRAG method are cost-effective and surpass the performance\nof the native LLM, they also exhibit several limitations.\nThe development of Advanced RAG and Modular RAG is\na response to these specific shortcomings in Naive RAG.\nA. Naive RAG\nThe Naive RAG research paradigm represents the earli-\nest methodology, which gained prominence shortly after the\n3\nFig. 2.",
+        "rize it into three stages: Naive RAG, Advanced\nRAG, and Modular RAG, as showed in Figure 3. Despite\nRAG method are cost-effective and surpass the performance\nof the native LLM, they also exhibit several limitations.\nThe development of Advanced RAG and Modular RAG is\na response to these specific shortcomings in Naive RAG.\nA. Naive RAG\nThe Naive RAG research paradigm represents the earli-\nest methodology, which gained prominence shortly after the\n3\nFig. 2.",
+        "rize it into three stages: Naive RAG, Advanced\nRAG, and Modular RAG, as showed in Figure 3. Despite\nRAG method are cost-effective and surpass the performance\nof the native LLM, they also exhibit several limitations.\nThe development of Advanced RAG and Modular RAG is\na response to these specific shortcomings in Naive RAG.\nA. Naive RAG\nThe Naive RAG research paradigm represents the earli-\nest methodology, which gained prominence shortly after the\n3\nFig. 2."
+      ],
+      "execution_time": 5.953158140182495,
+      "category": "comparison",
+      "query_id": 32,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compare Self-RAG with Corrective RAG approaches",
+      "answer": "Based on the provided context, it appears that the comparison of Self-RAG with Corrective RAG approaches is not explicitly shown in Table 5 or Figure 3. However, we can make an educated inference based on the context.\n\nThe results in Table 5 show that consistently supplementing RAG or Self-RAG with web search knowledge can improve the performance in most cases. Additionally, augmenting RAG or Self-RAG with the proposed self-correction mechanism improves their generation performance.\n\nSince there is no direct comparison of Self-RAG with Corrective RAG approaches in Table 5 or Figure 3, we can assume that this comparison would show a similar improvement in generation performance as seen for RAG and Self-RAG when supplemented with web search knowledge. However, without specific results, it's difficult to draw a definitive conclusion.\n\nIt's worth noting that the question asks us to compare Self-RAG with Corrective RAG approaches, which suggests that there may be some differences or variations between the two approaches that are not explicitly shown in the provided context.",
+      "relevant_chunks": 3,
+      "sources": [
+        "Corrective_RAG_2024.pdf",
+        "Corrective_RAG_2024.pdf",
+        "Corrective_RAG_2024.pdf"
+      ],
+      "scores": [
+        0.2866090760681567,
+        0.2731023019758376,
+        0.23854259195064986
+      ],
+      "contexts": [
+        "0\n61.8\nSelf-RAG\n29.0\n54.9\nSelf-RAG w. web\n24.9\n57.9\nTable 5: Comparison results between CRAG, Self-\nCRAG and RAG, Self-RAG with the same input in\nterms of accuracy.\nretrieval performance. A part of accurate retrieval\nresults were deliberately removed at random to\nimitate a low-quality retriever and evaluate how\nthe performance changed. Figure 3 demonstrated\nthe performance change of Self-RAG and Self-\nCRAG on the PopQA dataset.\nIt can be seen\nthat the generation performance of Self-RAG and",
+        "RAG and\nSelf-RAG were consistently supplemented with\nweb search knowledge to ensure they had access\nto the same scope of the retrieved knowledge.\nThe results in Table 5 show that consistently\nsupplementing RAG or Self-RAG with web search\nknowledge can improve the performance in most\ncases (except Self-RAG w. web using the original\nLLaMA2 model), though the improvement remains\nlimited. Furthermore, augmenting RAG or Self-\nRAG with the proposed self-correction mechanism",
+        "racy of generation\nno retrieval\nSelf-RAG\nSelf-CRAG\nFigure 3: The generation performance of Self-RAG\nand Self-CRAG given different retrieval performance\non the PopQA dataset with SelfRAG-LLaMA-7b. The\nlower horizontal line demonstrates the performance of\nthe generator without retrieval.\nLLaMA2-hf-7b SelfRAG-LLaMA2-7b\nPopQA\nCRAG\n54.9\n59.8\nRAG\n50.5\n52.8\nRAG w. web\n52.2\n53.8\nSelf-CRAG\n49.0\n61.8\nSelf-RAG\n29.0\n54.9\nSelf-RAG w. web\n24.9\n57.9\nTable 5: Comparison results between CRAG, Self-"
+      ],
+      "execution_time": 7.291331052780151,
+      "category": "comparison",
+      "query_id": 33,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are the trade-offs between hybrid and pure dense retrieval?",
+      "answer": "Unfortunately, the text does not mention the trade-offs between hybrid and pure dense retrieval directly. However, it does discuss the limitations of pure generative models and the advantages of using a retrieval mechanism in RAG, which is a hybrid architecture.\n\nIt can be inferred that the trade-offs between different types of retrieval mechanisms might exist, but they are not explicitly discussed in the provided context.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "2410.05779.pdf",
+        "2410.12837.pdf"
+      ],
+      "scores": [
+        0.14596880927241648,
+        0.12952034912976873,
+        0.10467002721942206
+      ],
+      "contexts": [
+        "across various applications. However, there is a gap in a sufficient survey of this space tracking\nthe evolution and recent changes in this space. The current survey intends to fill this gap.\n1.2 Overview of Retrieval-Augmented Generation (RAG)\nRetrieval-Augmented Generation (RAG) is an emerging hybrid architecture designed to address the\nlimitations of pure generative models. RAG integrates two key components: (i) a retrieval mechanism,",
+        "anation\": \"Answer 2 empowers the reader more effectively by detailing how each metric functions and\nits importance in evaluating recommendation systems. By providing context such as the trade-offs between\nprecision and recall and emphasizing user engagement metrics, it enables readers to make more informed\njudgments and understand the implications of different metrics. Answer 1 is more straightforward but lacks\nthe depth of insight regarding why these metrics matter.\"",
+        "re\nfoundational in text-based RAG models. These models utilize self-attention mechanisms to capture\ncontextual relationships within text, which enhances both retrieval accuracy and generation fluency.\nDense retrieval models, such as those using dense embeddings from BERT, offer superior performance\ncompared to traditional sparse methods like TF-IDF. Dense retrievers (Karpukhin et al. 2020), leverage\ndense representations to retrieve relevant documents more effectively."
+      ],
+      "execution_time": 4.128391265869141,
+      "category": "comparison",
+      "query_id": 34,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compare single-stage vs multi-stage retrieval in RAG",
+      "answer": "Unfortunately, the provided context does not mention a comparison between single-stage vs multi-stage retrieval in RAG. The text discusses various aspects of RAG systems, including position bias on different model pairs, few-shot examples improving LLM judges, and future research directions for RAG systems, but it does not specifically address the question of comparing single-stage vs multi-stage retrieval.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2306.05685.pdf",
+        "2401.05856.pdf",
+        "Self_RAG_2023.pdf"
+      ],
+      "scores": [
+        0.23215046600977407,
+        0.17150903420431163,
+        0.16430365457326448
+      ],
+      "contexts": [
+        "ing\n86.0%\n14.0%\n0.0%\nextraction\n78.0%\n12.0%\n10.0%\nstem\n44.0%\n54.0%\n2.0%\nhumanities\n36.0%\n60.0%\n4.0%\nTable 11: Position bias on different model pairs.\nPair\nConsistent\nBiased toward first\nBiased toward second\nGPT-3.5 vs Claude-V1\n67.5%\n23.8%\n8.8%\nGPT-3.5 vs Vicuna-13B\n73.8%\n23.8%\n2.5%\nGPT-3.5 vs LLaMA-13B\n98.8%\n1.2%\n0.0%\n25\nD.2\nFew-shot judge\nWe examine how few-shot examples improve LLM judges. As shown in Table 12, they improve the\nconsistency of all three LLM judges significantly.",
+        "irical investigation involving 15,000\ndocuments and 1000 questions. Our findings provide a guide to\npractitioners by presenting the challenges faced when implement-\ning RAG systems. We also included future research directions for\nRAG systems related to 1) chunking and embeddings, 2) RAG vs\nFinetuning, and 3) Testing and Monitoring. Large language models\nare going to continue to obtain new capabilities of interest to engi-\nneers and researchers. This paper presents the first investigation",
+        ". For example, this can involve\nfine-tuning the retriever for better retrieval results, fine-tuning\nthe generator for more personalized outputs, or engaging in\ncollaborative fine-tuning [27].\nD. RAG vs Fine-tuning\nThe augmentation of LLMs has attracted considerable atten-\ntion due to their growing prevalence. Among the optimization\nmethods for LLMs, RAG is often compared with Fine-tuning\n(FT) and prompt engineering. Each method has distinct charac-\nteristics as illustrated in Figure 4."
+      ],
+      "execution_time": 4.489135980606079,
+      "category": "comparison",
+      "query_id": 35,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How can we improve retrieval quality in RAG?",
+      "answer": "The question asks for ways to improve retrieval quality in RAG, but the provided context only lists various metrics and abbreviations related to text generation and evaluation. There is no explicit information on how to improve retrieval quality.\n\nHowever, based on general knowledge about improving retrieval quality in text retrieval systems, some potential suggestions could be:\n\n1. **Improve data quality**: Ensure that the training dataset used for RAG is diverse, relevant, and accurate.\n2. **Optimize model architecture**: Experiment with different neural network architectures and hyperparameters to find the best configuration for retrieval quality.\n3. **Use effective indexing techniques**: Utilize techniques like inverted indexes, hash tables, or other data structures to efficiently retrieve relevant documents.\n4. **Enhance ranking algorithms**: Develop or use advanced ranking algorithms that consider multiple factors, such as relevance, importance, and context, to improve the order of retrieved results.\n5. **Regularly update and refine models**: Continuously monitor performance metrics and update the model with new data, fine-tuning hyperparameters and adjusting the architecture as needed.\n\nThese suggestions are general ideas and might not be specific to RAG or its particular implementation. For a more accurate answer, it would be necessary to have more context about the RAG system's architecture, training data",
+      "relevant_chunks": 3,
+      "sources": [
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf",
+        "RAG_Survey_2023.pdf"
+      ],
+      "scores": [
+        0.3052642655743343,
+        0.3052642655743343,
+        0.3052642655743343
+      ],
+      "contexts": [
+        "ctual Robustness\nAccuracy\nEM\nAccuracy\nAccuracy\nRECALL†\nGeneration Quality\nCounterfactual Robustness\nR-Rate (Reappearance Rate)\nRAGAS‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\nCosine Similarity\nARES‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\nAccuracy\nAccuracy\nAccuracy\nTruLens‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\n*\nCRUD†\nRetrieval Quality",
+        "ctual Robustness\nAccuracy\nEM\nAccuracy\nAccuracy\nRECALL†\nGeneration Quality\nCounterfactual Robustness\nR-Rate (Reappearance Rate)\nRAGAS‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\nCosine Similarity\nARES‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\nAccuracy\nAccuracy\nAccuracy\nTruLens‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\n*\nCRUD†\nRetrieval Quality",
+        "ctual Robustness\nAccuracy\nEM\nAccuracy\nAccuracy\nRECALL†\nGeneration Quality\nCounterfactual Robustness\nR-Rate (Reappearance Rate)\nRAGAS‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\nCosine Similarity\nARES‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\nAccuracy\nAccuracy\nAccuracy\nTruLens‡\nRetrieval Quality\nGeneration Quality\nContext Relevance\nFaithfulness\nAnswer Relevance\n*\n*\n*\nCRUD†\nRetrieval Quality"
+      ],
+      "execution_time": 8.311481952667236,
+      "category": "optimization",
+      "query_id": 36,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What techniques reduce hallucinations in RAG systems?",
+      "answer": "The context doesn't explicitly mention specific techniques that reduce hallucinations in RAG systems. However, it does mention improving the efficiency of RAG models to reduce computational resources and latency, which could indirectly lead to reduced hallucinations by optimizing the overall system performance.\n\nBut based on general knowledge, some techniques that can help reduce hallucinations in LLMs (which can be applied to RAG systems as well) are:\n\n1. Data curation: Ensuring that the training data is accurate, diverse, and unbiased.\n2. Regularization techniques: Such as dropout, weight decay, or L1/L2 regularization to prevent overfitting.\n3. Ensemble methods: Combining multiple models or models with different architectures to reduce the impact of hallucinations.\n4. Adversarial training: Training the model to be robust against adversarial examples that can induce hallucinations.\n\nThese are general techniques and not specifically mentioned in the context.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2410.12837.pdf",
+        "2410.12837.pdf",
+        "2402.14558.pdf"
+      ],
+      "scores": [
+        0.1972700268020217,
+        0.1536346893852652,
+        0.14446163588767574
+      ],
+      "contexts": [
+        "veloping bias mitigation techniques for retrieval\nand generation in tandem is an ongoing challenge.\nCoherence: RAG models often struggle with integrating the retrieved knowledge into coherent,\ncontextually relevant text. The alignment between retrieved passages and the generation model's output\nis not always seamless, leading to inconsistencies or factual hallucinations in the final response (Ji et al.\n2022).",
+        "retrieval and generation processes without compromising performance. Techniques such as distributed\ncomputing and efficient indexing methods are essential for handling large datasets. Improving the\nefficiency of RAG models involves optimizing both retrieval and generation components to reduce\ncomputational resources and latency.\n6.3 Personalization and Adaptation: Future RAG models should focus on personalizing retrieval\nprocesses to cater to individual user preferences and contexts.",
+        "ink\nYes\nYes\nYes\nDatasets, Biases and Offensiveness, Usage, Carbon footprint,\nHallucinations of LLMs\nTable 6: Master table of the survey with 68 research papers."
+      ],
+      "execution_time": 6.262308120727539,
+      "category": "optimization",
+      "query_id": 37,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How can we optimize RAG for low-latency applications?",
+      "answer": "The provided context does not explicitly mention how to optimize RAG for low-latency applications. However, based on the general knowledge about reinforcement learning-based models like RAG (Reinforcement Augmented Generative) and the optimization techniques commonly used in large language model research, here are a few possible suggestions:\n\n1. **Pruning and Quantization**: Reduce the computational requirements of the model by pruning unnecessary weights or quantizing the model's parameters to lower precision.\n2. **Knowledge Distillation**: Transfer knowledge from a larger, more complex model to a smaller, more efficient one, allowing for faster inference times without compromising performance.\n3. **Model Compression**: Use techniques like Huffman coding, LZW compression, or other lossless compression methods to reduce the size of the model's weights and activations, which can lead to faster inference times.\n4. **Efficient Inference Architectures**: Explore alternative architectures that are specifically designed for low-latency inference, such as knowledge distillation-based models or specialized pruning techniques like DQD (Dynamic Quantization and Distillation).\n5. **Low-Latency Optimizations**: Utilize specific optimization algorithms designed for low-latency applications, such as those used in edge AI or other real-time processing scenarios.\n\nKeep in mind that these suggestions are",
+      "relevant_chunks": 3,
+      "sources": [
+        "arxiv_1906.02329_2019.pdf",
+        "Self_RAG_2023.pdf",
+        "2312.10997.pdf"
+      ],
+      "scores": [
+        0.17619452180757433,
+        0.12837987369882403,
+        0.12837987369882403
+      ],
+      "contexts": [
+        "d note that the attention applied\nover the past search activities recognizes their contributions in\nrepresenting the search context up to the current search action,\nbut not to a particular retrieval purpose, e.g., document ranking or\nquery suggestion. We will discuss how to optimize these task-level\nrepresentations with respect to specific retrieval tasks next.\n3.3\nJoint Learning of Ranking and Suggestion\nIn the following, we describe how we optimize the model parame-",
+        "efront of research in the LLMs community.\nThe primary objective of this evaluation is to comprehend\nand optimize the performance of RAG models across diverse\napplication scenarios.This chapter will mainly introduce the\nmain downstream tasks of RAG, datasets, and how to evaluate\nRAG systems.\nA. Downstream Task\nThe core task of RAG remains Question Answering (QA),\nincluding\ntraditional\nsingle-hop/multi-hop\nQA,\nmultiple-\nchoice, domain-specific QA as well as long-form scenarios\nsuitable for RAG.",
+        "efront of research in the LLMs community.\nThe primary objective of this evaluation is to comprehend\nand optimize the performance of RAG models across diverse\napplication scenarios.This chapter will mainly introduce the\nmain downstream tasks of RAG, datasets, and how to evaluate\nRAG systems.\nA. Downstream Task\nThe core task of RAG remains Question Answering (QA),\nincluding\ntraditional\nsingle-hop/multi-hop\nQA,\nmultiple-\nchoice, domain-specific QA as well as long-form scenarios\nsuitable for RAG."
+      ],
+      "execution_time": 7.951619863510132,
+      "category": "optimization",
+      "query_id": 38,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is context compression in RAG and why is it useful?",
+      "answer": "The text does not explicitly mention \"context compression\" in RAG (Recurrent Autoencoder for Graphs). However, based on the context of prompt compression techniques and Infini-Transformer models, I can make an educated guess.\n\nContext compression likely refers to the process of compressing the input sequence or prompts used to train the model. This is mentioned in the text as a technique that requires an efficient compression objective for training prompt compression techniques (Ge et al., 2023). The Infini-Transformer models are designed to achieve this goal, with some results reported on benchmarks involving extremely long input sequences.\n\nThe usefulness of context compression in RAG and other models is not explicitly stated in the text. However, it can be inferred that compressing input sequences or prompts can help improve model efficiency, reduce computational requirements, and potentially lead to better performance on tasks such as language modeling.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2404.07143.pdf",
+        "2404.07143.pdf",
+        "arxiv_1809.05190_2018.pdf"
+      ],
+      "scores": [
+        0.22258647723916672,
+        0.1712213724297453,
+        0.1618445089621243
+      ],
+      "contexts": [
+        "esulting\nin diminished efficiency. It was also observed in AutoCompressors (Chevalier et al., 2023)\nthat an efficient compression objective is needed for training such prompt compression\ntechniques (Ge et al., 2023).\n4\nExperiments\nWe evaluated our Infini-Transformer models on benchmarks involving extremely long input\nsequences: long-context language modeling, 1M length passkey context block retrieval\nand 500K length book summarization tasks. For the language modeling benchmark, we",
+        "g results are compared in terms of average token-\nlevel perplexity. Comp. denotes compression ratio. Infini-Transformer outperforms memo-\nrizing transformers with memory length of 65K and achieves 114x compression ratio.\nPosition Embeddings (PE). As shown Figure 1, we don’t use position embeddings for\nthe key and query vectors of the compressive memory to store only global contextual\ninformation in the long-term memory. The PEs were applied to the QK vectors only after",
+        "ble to help identify overfitting or\nunder-performance. If spurious patterns like copyright messages\nare identified as part of the intent, developers can quickly rectify\nthe data and improve the model.\nWhile terms are easy to understand as explanations, it may not\nbe enough to accurately answer two important questions: Why\nis A relevant? Why is A ranked above B? Hence we additionally\nneed an explanation model that can easily show how a document\nis relevant to the query using the intent terms."
+      ],
+      "execution_time": 6.305196046829224,
+      "category": "optimization",
+      "query_id": 39,
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does prompt engineering affect RAG quality?",
+      "answer": "Unfortunately, the provided context does not mention prompt engineering or its effect on RAG quality. The text only discusses the challenges and research questions related to building robust Retrieval Augmented Generation (RAG) systems, but it does not provide information about prompt engineering specifically.",
+      "relevant_chunks": 3,
+      "sources": [
+        "2401.05856.pdf",
+        "2401.05856.pdf",
+        "2401.05856.pdf"
+      ],
+      "scores": [
+        0.22207666382372743,
+        0.21825689498723305,
+        0.1878303167397544
+      ],
+      "contexts": [
+        "to shine a light on what issues\nengineers will face and what software engineering research is nec-\nessary to realise solutions with the current state-of-the-art RAG\nsystems.\nEmerging work has looked at benchmarking RAG systems [3]\nbut not at the failures occurring during implementation. Software\nengineering research has investigated the use of RAG systems for\ncode-related tasks [15]. However, the application of RAG systems\nis broader than software engineering tasks. This paper comple-",
+        "to the challenges with creating robust\nRAG systems. As advances in LLMs continue to take place, the\nsoftware engineering community has a responsibility to provide\nknowledge on how to realise robust systems with LLMs. This work\nis an important step for robustness in building RAG systems.\nResearch questions for this work include:\n• What are the failure points that occur when engineering a RAG\nsystem? (section 5) We present an empirical experiment using",
+        "g community.\nCCS CONCEPTS\n• Software and its engineering →Empirical software valida-\ntion.\nKEYWORDS\nRetrieval Augmented Generation, RAG, SE4AI, Case Study\nACM Reference Format:\nScott Barnett, Stefanus Kurniawan, Srikanth Thudumu, Zach Brannelly, Mo-\nhamed Abdelrazek . 2024. Seven Failure Points When Engineering a Retrieval\nAugmented Generation System. In Proceedings of 3rd International Confer-\nence on AI Engineering — Software Engineering for AI (CAIN 2024). ACM,\nNew York, NY, USA, 6 pages."
+      ],
+      "execution_time": 3.738309860229492,
+      "category": "optimization",
+      "query_id": 40,
+      "difficulty": "medium"
+    }
+  ],
+  "metrics": {
+    "average_execution_time": 5.278293466567993,
+    "average_top_score": 0.22461509350037656,
+    "total_queries": 50
+  }
+}

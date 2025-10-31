@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Віртуальні середовища
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи та тимчасові файли
+*.log
+/tmp/
+*.tmp
+
+# API ключі та секрети
+.env
+secrets.py
+*_secret.py
+
+# Великі файли та кеші (PDF та картинки ВКЛЮЧЕНІ для студентів)
+# *.pdf  - коментуємо щоб включити PDF
+*.pkl
+*.pickle
+# data/pdfs/*.pdf  - коментуємо щоб включити PDF
+
+# Результати (опціонально - можна включити для демонстрації)
+# results/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Інше
+*.bak
+*.swp
+*~

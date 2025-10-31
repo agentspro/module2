@@ -1,0 +1,23 @@
+{
+  "ragas_comparison": [
+    {
+      "approach": "Naive RAG",
+      "faithfulness": 0.7716450216450216,
+      "answer_relevancy": 0.03242583125164525,
+      "queries_evaluated": 11,
+      "average_score": 0.4020354264483334
+    },
+    {
+      "approach": "Advanced RAG",
+      "faithfulness": 0.08891020176186416,
+      "answer_relevancy": 0.44846517402109076,
+      "queries_evaluated": 6,
+      "average_score": 0.26868768789147746
+    }
+  ],
+  "summary": {
+    "total_approaches": 2,
+    "best_approach": "Naive RAG",
+    "best_score": 0.4020354264483334
+  }
+}
