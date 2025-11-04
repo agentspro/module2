@@ -121,7 +121,9 @@ def generate_testset(
 
     elapsed = time.time() - start_time
 
-    print(f"✅ Згенеровано: {len(testset)} тестових кейсів за {elapsed:.1f}с")
+    # Отримуємо кількість через DataFrame (TestDataset не має __len__)
+    df = testset.to_pandas()
+    print(f"✅ Згенеровано: {len(df)} тестових кейсів за {elapsed:.1f}с")
 
     return testset
 
