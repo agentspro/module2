@@ -18,11 +18,19 @@ Production targets:
 """
 
 import sys
+import os
 from pathlib import Path
 import json
 import time
 import numpy as np
 from typing import Dict, List
+from dotenv import load_dotenv
+
+# Завантаження змінних середовища з .env (шукаємо в поточній та батьківській директорії)
+load_dotenv()  # Спочатку поточна директорія
+if not os.getenv('OPENAI_API_KEY'):
+    # Якщо не знайшли, шукаємо в батьківській директорії
+    load_dotenv(Path(__file__).parent.parent / '.env')
 
 # RAGAS imports
 try:

@@ -29,8 +29,11 @@
 ├── hybrid_rag/             # Гібридний підхід
 │   └── hybrid_rag_demo.py  # BM25 + векторний пошук (RRF)
 │
-└── corrective_rag/         # Адаптивна самоперевірка
-    └── corrective_rag_demo.py # 3 ітерації + веб fallback
+├── corrective_rag/         # Адаптивна самоперевірка
+│   └── corrective_rag_demo.py # 3 ітерації + веб fallback
+│
+└── chromadb_rag/           # ChromaDB Persistent Storage (НОВИЙ!)
+    └── chromadb_rag_demo.py # Advanced RAG + ChromaDB векторна БД
 ```
 
 ### 📁 Дані та результати
@@ -266,6 +269,8 @@ RAGAS метрики (опціонально):
 - **scikit-learn** - TF-IDF, векторизація
 - **PyMuPDF (fitz)** - парсинг PDF
 - **FAISS** - векторний пошук (Facebook AI)
+- **ChromaDB** - persistent векторна база даних
+- **Sentence-Transformers** - dense embeddings для ChromaDB
 - **OpenAI API** - генерація відповідей (gpt-4o-mini)
 - **Ollama** - локальна LLM (fallback)
 

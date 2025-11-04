@@ -3,17 +3,25 @@ numpy>=1.24.0
 scikit-learn>=1.3.0
 requests>=2.31.0
 pymupdf>=1.23.0  # для парсингу PDF (fitz)
+python-dotenv>=1.0.0  # для завантаження .env файлів
 
 # Опціонально: для FAISS RAG
 # faiss-cpu>=1.7.4  # для CPU
 # faiss-gpu>=1.7.4  # для GPU
 
-# Опціонально: для кращих embeddings
-# sentence-transformers>=2.2.0
+# Для ChromaDB RAG
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
 
-# Опціонально: для OpenAI API
-# openai>=1.0.0
+# Для OpenAI API
+openai>=1.0.0
 
-# Опціонально: для RAGAS evaluation
-# ragas>=0.1.0
-# datasets>=2.14.0
+# Для RAGAS evaluation та генерації датасетів
+# ВАЖЛИВО: Використовуємо ragas 0.1.x (стабільна версія з старим API)
+# Версія 0.2.x має інший API!
+ragas==0.1.21
+datasets>=2.14.0
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+pypdf>=3.17.0

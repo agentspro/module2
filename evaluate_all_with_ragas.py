@@ -13,9 +13,17 @@ RAGAS Evaluation для всіх RAG підходів
 """
 
 import json
+import os
 from pathlib import Path
 from typing import Dict, List
 import sys
+from dotenv import load_dotenv
+
+# Завантаження змінних середовища з .env (шукаємо в поточній та батьківській директорії)
+load_dotenv()  # Спочатку поточна директорія
+if not os.getenv('OPENAI_API_KEY'):
+    # Якщо не знайшли, шукаємо в батьківській директорії
+    load_dotenv(Path(__file__).parent.parent / '.env')
 
 # RAGAS imports
 try:
