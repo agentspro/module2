@@ -30,6 +30,7 @@ try:
     from ragas.testset.evolutions import simple, reasoning, multi_context
     from langchain_openai import ChatOpenAI, OpenAIEmbeddings
     from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
     HAS_RAGAS = True
 except ImportError:
     HAS_RAGAS = False
@@ -38,12 +39,13 @@ except ImportError:
     sys.exit(1)
 
 
-def load_documents_for_generation(pdf_dir: str = "data/pdfs"):
+def load_documents_for_generation(pdf_dir: str = "data/pdfs", max_pages: int = 50):
     """
     Завантажити PDF документи для генерації тестових запитів
 
     Args:
         pdf_dir: Директорія з PDF файлами
+        max_pages: Максимальна кількість сторінок (обмеження для стабільності)
 
     Returns:
         List of Document objects для RAGAS
@@ -57,15 +59,34 @@ def load_documents_for_generation(pdf_dir: str = "data/pdfs"):
         show_progress=True
     )
 
-    documents = loader.load()
-    print(f"✅ Завантажено: {len(documents)} сторінок з PDF")
+    all_documents = loader.load()
+    print(f"✅ Завантажено: {len(all_documents)} сторінок з PDF")
 
-    return documents
+    # Обмеження для стабільності
+    documents = all_documents[:max_pages]
+    if len(all_documents) > max_pages:
+        print(f"⚠️  Обмежено до {max_pages} сторінок (для уникнення зависання)")
+
+    # Розбиття на менші chunks
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=200
+    )
+    split_docs = text_splitter.split_documents(documents)
+
+    # Обмеження chunks
+    if len(split_docs) > 100:
+        split_docs = split_docs[:100]
+        print(f"⚠️  Обмежено до {len(split_docs)} chunks")
+
+    print(f"✅ Підготовлено: {len(split_docs)} chunks для генерації")
+
+    return split_docs
 
 
 def generate_testset(
     documents,
-    test_size: int = 50,
+    test_size: int = 10,
     distributions: dict = None
 ):
     """
@@ -80,13 +101,27 @@ def generate_testset(
         Generated testset
     """
     print(f"\n🧪 Генерація {test_size} тестових запитів...")
-    print("   Це займе 3-5 хвилин для 50 запитів")
+    print(f"   Документів: {len(documents)}")
     print()
 
-    # Ініціалізація LLM та embeddings для RAGAS
-    generator_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
-    critic_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    # Ініціалізація LLM та embeddings для RAGAS з таймаутами
+    generator_llm = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0.3,
+        request_timeout=60,
+        max_retries=2
+    )
+    critic_llm = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0,
+        request_timeout=60,
+        max_retries=2
+    )
+    embeddings = OpenAIEmbeddings(
+        model="text-embedding-3-small",
+        request_timeout=60,
+        max_retries=2
+    )
 
     # Створюємо генератор
     generator = TestsetGenerator.from_langchain(
@@ -95,18 +130,14 @@ def generate_testset(
         embeddings=embeddings
     )
 
-    # Розподіл типів запитів (за замовчуванням)
+    # Розподіл типів запитів (спрощений для швидкості)
     if distributions is None:
         distributions = {
-            simple: 0.4,        # 40% - прості фактичні запити
-            reasoning: 0.3,     # 30% - потребують роздумів
-            multi_context: 0.3  # 30% - потребують кількох документів
+            simple: 1.0,  # 100% - тільки прості запити (швидше)
         }
 
     print("📊 Розподіл типів запитів:")
-    print(f"   Simple (факти):          {distributions.get(simple, 0)*100:.0f}%")
-    print(f"   Reasoning (роздуми):     {distributions.get(reasoning, 0)*100:.0f}%")
-    print(f"   Multi-context (складні): {distributions.get(multi_context, 0)*100:.0f}%")
+    print(f"   Simple (факти): {distributions.get(simple, 0)*100:.0f}%")
     print()
 
     # Генерація
@@ -116,12 +147,11 @@ def generate_testset(
         documents,
         test_size=test_size,
         distributions=distributions,
-        raise_exceptions=False  # Не падати на помилках
+        raise_exceptions=False
     )
 
     elapsed = time.time() - start_time
 
-    # Отримуємо кількість через DataFrame (TestDataset не має __len__)
     df = testset.to_pandas()
     print(f"✅ Згенеровано: {len(df)} тестових кейсів за {elapsed:.1f}с")
 
@@ -219,18 +249,20 @@ def main():
 
     # Параметри генерації
     PDF_DIR = "data/pdfs"
-    TEST_SIZE = 50  # Кількість тестових запитів
+    MAX_PAGES = 150  # Збільшено для тестування
+    TEST_SIZE = 10  # Кількість тестових запитів
     OUTPUT_FILE = "data/synthetic_testset.json"
 
     print(f"⚙️  Конфігурація:")
     print(f"   PDF директорія: {PDF_DIR}")
+    print(f"   Максимум сторінок: {MAX_PAGES}")
     print(f"   Кількість тестів: {TEST_SIZE}")
     print(f"   Вихідний файл: {OUTPUT_FILE}")
     print()
 
     try:
         # Крок 1: Завантаження документів
-        documents = load_documents_for_generation(PDF_DIR)
+        documents = load_documents_for_generation(PDF_DIR, max_pages=MAX_PAGES)
 
         if not documents:
             print("❌ Документи не знайдено!")
