@@ -258,9 +258,10 @@ def main():
     # Список підходів для оцінки
     approaches = [
         ("Naive RAG", "results/naive_rag_results.json"),
-        ("Advanced RAG", "results/advanced_rag_results.json"),
-        ("Hybrid RAG (All)", "results/hybrid_rag_all_results.json"),
-        ("Corrective RAG", "results/corrective_rag_results.json"),
+        ("Naive RAG (Chroma DB)", "results/naive_rag_results_2.json"),
+        #("Advanced RAG", "results/advanced_rag_results.json"),
+        #("Hybrid RAG (All)", "results/hybrid_rag_all_results.json"),
+        #("Corrective RAG", "results/corrective_rag_results.json"),
         # ("Multimodal RAG", "results/multimodal_rag_results.json"),  # Поки немає
     ]
 
