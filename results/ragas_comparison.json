@@ -2,22 +2,22 @@
   "ragas_comparison": [
     {
       "approach": "Naive RAG",
-      "faithfulness": 0.7716450216450216,
-      "answer_relevancy": 0.03242583125164525,
-      "queries_evaluated": 11,
-      "average_score": 0.4020354264483334
+      "faithfulness": 0.9575326872201871,
+      "answer_relevancy": 0.10942964744767414,
+      "queries_evaluated": 50,
+      "average_score": 0.5334811673339306
     },
     {
-      "approach": "Advanced RAG",
-      "faithfulness": 0.08891020176186416,
-      "answer_relevancy": 0.44846517402109076,
-      "queries_evaluated": 6,
-      "average_score": 0.26868768789147746
+      "approach": "Naive RAG (Chroma DB)",
+      "faithfulness": 0.9839595959595958,
+      "answer_relevancy": 0.3386669762127375,
+      "queries_evaluated": 50,
+      "average_score": 0.6613132860861667
     }
   ],
   "summary": {
     "total_approaches": 2,
-    "best_approach": "Naive RAG",
-    "best_score": 0.4020354264483334
+    "best_approach": "Naive RAG (Chroma DB)",
+    "best_score": 0.6613132860861667
   }
 }
